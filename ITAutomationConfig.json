@@ -11,9 +11,10 @@
   "papertrialHostName" : "FFITAutomation",
   "FFDBConnection"     : "mongodb://heroku_29dwj789:6mrdll1l8u1mbbildq2osou2uu@ds017726.mlab.com:17726/heroku_29dwj789",
   "YearsToGenerateCSVOptions": [
-    "2015",
+	"2105",
 	"2016",
-	"2017"
+	"2017",
+	"2018"
   ],
   "ASyears": [
     "2015",
