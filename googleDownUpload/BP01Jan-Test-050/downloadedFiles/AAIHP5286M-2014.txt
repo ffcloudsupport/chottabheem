@@ -1,0 +1,54 @@
+^Form 26AS^
+
+File Creation Date^Permanent Account Number (PAN)^Current Status of PAN^Financial Year^Assessment Year^Name of Assessee^Address Line 1^Address Line 2^Address Line 3^Address Line 4^Address Line 5^Statecode^Pin Code
+04-01-2018^AAIHP5286M^ACTIVE^2013-2014^2014-2015^    POPAT RAJARAM PATIL HUF^SWAGAT^DEVSHANTI GALLI NO 12/13^PRABHAT ROAD^^PUNE^MAHARASHTRA^411004
+
+^PART A - Details of Tax Deducted at Source^
+Sr. No.^Name of Deductor^TAN of Deductor^^^^^Total Amount Paid / Credited(Rs.)^Total Tax Deducted(Rs.)^Total TDS Deposited(Rs.)
+1^POPAT RAJARAM PATIL^PNEP09708G^^^^^1199396.00^143403.00^143403.00^
+^Sr. No.^Section^Transaction Date^Status of Booking^Date of Booking^Remarks^Amount Paid / Credited(Rs.)^Tax Deducted(Rs.)^TDS Deposited(Rs.)
+^1^194A^31-Mar-2014^F^08-Oct-2014^-^458311.00^69294.00^69294.00^
+^2^194A^30-Sep-2013^F^04-Mar-2014^-^741085.00^74109.00^74109.00^
+
+
+^PART A1 - Details of Tax Deducted at Source for 15G / 15H^
+Sr. No.^Name of Deductor^TAN of Deductor^^^^Total Amount Paid / Credited(Rs.)^Total Tax Deducted(Rs.)^Total TDS Deposited(Rs.)
+^^^*********** No Transactions Present **********^
+
+
+^PART A2 - Details of Tax Deducted at Source on Sale of Immovable Property u/s 194IA/ TDS on Rent of Property u/s 194IB (For Seller/Landlord of Property)^
+Sr. No.^Acknowledgement Number^Name of Deductor^PAN of Deductor^Transaction Date^Total Transaction Amount(Rs.)^Total TDS Deposited(Rs.)
+^^^*********** No Transactions Present **********^
+
+
+^PART B - Details of Tax Collected at Source^
+Sr. No.^Name of Collector^TAN of Collector^^^^^Total Amount Paid / Debited(Rs.)^Total Tax Collected(Rs.)^Total TCS Deposited(Rs.)
+^^^*********** No Transactions Present **********^
+
+
+^PART C - Details of Tax Paid (other than TDS or TCS)^
+Sr. No.^Major Head^Minor Head^Tax(Rs.)^Surcharge(Rs.)^Education Cess(Rs.)^Others(Rs.)^Total Tax(Rs.)^BSR Code^Date of  Deposit^Challan Serial Number^Remarks
+1^0032^300^74633.00^0.00^0.00^0.00^76900.00^0004329^28-Oct-2014^02632^-
+2^0021^300^209806.00^0.00^6294.00^0.00^216100.00^0004329^23-Sep-2014^01697^-
+
+
+^PART D - Details of Paid Refund^
+Sr. No.^Assessment Year^Mode^Amount of Refund(Rs.)^Interest(Rs.)^Date of Payment^Remarks
+1^2013   ^ECS                 ^30.0^NA^30-Dec-2013^-
+
+
+^PART E - Details of AIR Transaction^
+Sr. No.^Type of Transaction^Name of AIR Filer^Transaction Date^Single / Joint Party Transaction^Number of Parties^Amount(Rs.)^Mode^Remarks
+^^^*********** No Transactions Present **********^
+
+
+^PART F - Details of Tax Deducted at Source on Sale of Immovable Property u/s 194IA/ TDS on Rent of Property u/s 194IB (For Buyer/Tenant of Property)^
+Sr. No.^Acknowledgement Number^Name of Deductee^PAN of Deductee^Transaction Date^Total Transaction Amount(Rs.)^Total TDS Deposited(Rs.)^Total Amount Deposited other than TDS(Rs.)
+^^^*********** No Transactions Present **********^
+
+
+^PART G - TDS Defaults (Processing of Statements)^
+Sr. No.^Financial Year^Short Payment^Short Deduction^Interest on  TDS Payments Default^Interest on TDS Deduction Default^Late Filing Fee u/s 234E^Interest u/s 220(2)^Total Default
+^^^*********** No Transactions Present **********^
+
+

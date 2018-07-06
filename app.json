@@ -1,0 +1,6 @@
+{
+  "name": "FF Order Processing IT Automation",
+  "description": "FF IT Automation - Fetches files in JSON and XLS format and converts the file into CSV, which gets uploaded to FFCRA application in Salesforce",
+  "repository": "There are no repository",
+  "keywords": ["node", "FF", "ITSSRC", "CRA", "IT", "Automation"]
+}

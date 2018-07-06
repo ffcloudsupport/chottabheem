@@ -1,0 +1,6 @@
+"BankName__c","IFSC_Code__c","Account_Number__c","AccountType__c","Year__c"
+"State Bank of India","SBIN0000305","11432194822'","","2017"
+"","SBIN0000305","12577'","SAV","2014"
+"STATE BANK OF INDIA","SBIN0000305","12577'","SAV","2015"
+"STATE BANK OF INDIA","SBIN0000305","11432194822'","SAV","2016"
+"IDBI Ltd","IBKL0469SUB","003000101000099'","","2017"
