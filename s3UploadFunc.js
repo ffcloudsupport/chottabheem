@@ -7,7 +7,7 @@ const errorRecovery = require('./errorRecoveryFunc.js');
 const rmdir = require('rmdir');
 const papertrail = require('./papertrails.js');
 const mailg = require('./MailGun.js');
-const zipfile = require('./zip.js');
+//const zipfile = require('./zip.js');
 
 const ffOrdStUp = require('./fforderStaUpdate.js');
 var glob = require('./glob.js');
@@ -22,7 +22,7 @@ module.exports = {
   main(auth, ffOrderNumber, PullSeqNo, dataPullName, trailName) {
     const downFilesPath = path1 + ffOrderNumber + path2;
     const uploadFilesPath = path1 + ffOrderNumber + path3;
-    zipfile.zipConv(ffOrderNumber, PullSeqNo);
+    //zipfile.zipConv(ffOrderNumber, PullSeqNo);
     var destFolderId = process.env.S3_UPLOAD_PATH;
     var fileUploadCount = 0;
     const bucketName = process.env.S3_BUCKET_NAME;
