@@ -25,7 +25,7 @@ module.exports = {
     //zipfile.zipConv(ffOrderNumber, PullSeqNo);
     var destFolderId = process.env.S3_UPLOAD_PATH;
     var fileUploadCount = 0;
-    const bucketName = process.env.S3_BUCKET_NAME;
+    const bucketName = process.env.S3_BUCKET_NAME; 
     var filePath = ""
     const awsWorker = (rxCallback, results) => {
       // make a local copy as this cannot be used in console.log

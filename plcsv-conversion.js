@@ -331,7 +331,7 @@ module.exports = {
 
 			}
 			    //if the year is 2017 and ITR-3 it will get executed.
-				else if(formname =='ITR-3' && assyear == 2017 ){
+				else if(formname =='ITR-3' &&( assyear == 2017 || assyear == 2018) ){
 					saleGood = checkFieldAvl('//ITRForm:SaleOfGoods/text()', 0);
 					saleSer = checkFieldAvl('//ITRForm:SaleOfServices/text()', 0);
 					opRevtoAmt = checkFieldAvl('//ITRForm:OperatingRevenueTotAmt/text()', 0);
@@ -636,7 +636,7 @@ module.exports = {
 					// clubEx  =0;festCeleb  =0;schol  =0;giftDet  =0;dona  =0;cessDet  =0;audit  =0;othExp  =0;panDet  =0;amt  =0;otherAmt  =0;panNotAvail  =0;pbtDet  =0;proAftrTax  =0;amtAvlApprDet  =0;propAccBal =0;netpro  =0;totBussPro  =0;grossRecPrf  =0;grossProPrf  =0;expPrf  =0;netProPrf =0;
 			}
 				//if the year is 2017 and ITR-3 it will get executed.
-				else if(formname =='ITR-3' && assyear == 2017 ){
+				else if(formname =='ITR-3' &&( assyear == 2017 || assyear ==2018 )){
 					saleGood = checkFieldAvl('//ITRForm:SaleOfGoods/text()', 0);
 					saleSer = checkFieldAvl('//ITRForm:SaleOfServices/text()', 0);
 					opRevtoAmt = checkFieldAvl('//ITRForm:OperatingRevenueTotAmt/text()', 0);
@@ -803,7 +803,7 @@ module.exports = {
 
 		}
 		        //Here mapping of json object in the form of key and value pair is being done.
-				if(((formname == 'ITR-4') && (assyear == 2014 ||assyear == 2015||assyear == 2016)) || (formname == 'ITR-3' && assyear == 2017) ){
+				if(((formname == 'ITR-4') && (assyear == 2014 ||assyear == 2015||assyear == 2016)) || (formname == 'ITR-3' &&( assyear == 2017 || assyear == 2018)) ){
 						var parDtls = [];
 							parDtls = {
 								Year__c: assyear,
@@ -960,6 +960,7 @@ module.exports = {
 						}
 
 						fs.writeFileSync(path1 + orderNo + "/"+ PLcsvPath + '/' + orderNo + '_' + pullSeqNo + '_' + type + '_' + assyear + fileEx, ffcsv);
+						fs.writeFileSync(path1 + orderNo + "/"+ path3 + '/' + orderNo + '_' + pullSeqNo + '_' + type + '_' + assyear + fileEx, ffcsv);
 						console.log('Pl convertion completed');
                     } else {
 

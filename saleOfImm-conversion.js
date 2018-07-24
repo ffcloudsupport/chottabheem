@@ -249,7 +249,7 @@ module.exports = {
 				if(data){
 					var  select = xpath.useNamespaces({ 'ITRForm': 'http://incometaxindiaefiling.gov.in/master' });
 					var doc = new mydom().parseFromString(data.toString());
-					console.log('docvcaloe' , doc);
+				//	console.log('docvcaloe' , doc);
 					if (doc == 'undefined' || null || '0'){
 						console.log('zero KB file');
 				}else{

@@ -238,7 +238,7 @@ module.exports = {
 
 
 			}
-				else if( formname1 == 'ITR-3' && assyear == 2017){
+				else if( formname1 == 'ITR-3' && (assyear == 2017 || assyear == 2018)){
 					proCap = checkFieldAvl1('//ITRForm:PropCap/text()', 0);
 					totalResSurp = checkFieldAvl1('//ITRForm:TotResrNSurp/text()', 0);
 					forCurLoan = checkFieldAvl1('//ITRForm:ForeignCurrLoan/text()', 0);
@@ -455,7 +455,7 @@ module.exports = {
 					// totFundApp=0;
 
 				}
-				else if( formname1 == 'ITR-3' && assyear == 2017){
+				else if( formname1 == 'ITR-3' && (assyear == 2017 || assyear == 2018)){
 					proCap = checkFieldAvl1('//ITRForm:PropCap/text()', 0);
 					totalResSurp = checkFieldAvl1('//ITRForm:TotResrNSurp/text()', 0);
 					forCurLoan = checkFieldAvl1('//ITRForm:ForeignCurrLoan/text()', 0);
@@ -558,7 +558,7 @@ module.exports = {
 							}
 
 						}
-				if(((formname1 == 'ITR-4' || formname1 == 'ITR-4S') && (assyear == 2014 ||assyear == 2015||assyear == 2016)) || (formname1 == 'ITR-3' && assyear == 2017) ){
+				if(((formname1 == 'ITR-4' || formname1 == 'ITR-4S') && (assyear == 2014 ||assyear == 2015||assyear == 2016)) || (formname1 == 'ITR-3' && (assyear == 2017 || assyear == 2018)) ){
 						var bsDtls = [];
 							bsDtls = {
 								Year__c: assyear,
@@ -656,6 +656,7 @@ module.exports = {
 						}
                        // fs.writeFileSync('taxbs.csv', ffcsv);
 						fs.writeFileSync(path1 + orderNo + "/"+ BscsvPath + '/' + orderNo + '_' + pullSeqNo + '_' + type + '_' + assyear + fileEx, ffcsv);
+						fs.writeFileSync(path1 + orderNo + "/"+ path3 + '/' + orderNo + '_' + pullSeqNo + '_' + type + '_' + assyear + fileEx, ffcsv);
 						console.log('BS convertion completed');
                     } else {
 
