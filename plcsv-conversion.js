@@ -960,7 +960,7 @@ module.exports = {
 						}
 
 						fs.writeFileSync(path1 + orderNo + "/"+ PLcsvPath + '/' + orderNo + '_' + pullSeqNo + '_' + type + '_' + assyear + fileEx, ffcsv);
-						fs.writeFileSync(path1 + orderNo + "/"+ path3 + '/' + orderNo + '_' + pullSeqNo + '_' + type + '_' + assyear + fileEx, ffcsv);
+				//		fs.writeFileSync(path1 + orderNo + "/"+ path3 + '/' + orderNo + '_' + pullSeqNo + '_' + type + '_' + assyear + fileEx, ffcsv);
 						console.log('Pl convertion completed');
                     } else {
 

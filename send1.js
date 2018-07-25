@@ -21,9 +21,9 @@ amqp.connect(argv.amqp, function (err, conn) {
 
 			var jsonObj =  {
   "Status": "Success",
-  "FFOrderNo": "FF-2018Test-001",
-  "GooglePath": "FF-2018Test-001/1/IncTax/001",
-  "S3BucketPath": "FF-2018Test-001/1/IncTax/001",
+  "FFOrderNo": "BP-23Jul-053",
+  "GooglePath": "BP-23Jul-053/1/IncTax/001",
+  "S3BucketPath": "BP-23Jul-053/1/IncTax/001",
   "PullSeqNo": "1",
   "Datapull": "IncTax",
   "FFProdCode": "IT_SEM_INF_100",

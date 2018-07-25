@@ -67,7 +67,7 @@ module.exports = {
                     const select = xpath.useNamespaces({ 'ITRForm': 'http://incometaxindiaefiling.gov.in/master','ITRForm':'http://incometaxindiaefiling.gov.in/Corpmaster' })
 					formname1 = checkFieldAvl1('//ITRForm:FormName/text()', 0);
 					assyear = checkFieldAvl1('//ITRForm:AssessmentYear/text()',0);
-		      if((formname1 == 'ITR-3' && assyear == 2017 )||(formname1 == 'ITR-4') && (assyear == 2014 || assyear == 2015 || assyear == 2016)){
+		      if((formname1 == 'ITR-3' && (assyear == 2017 || assyear == 2018) )||(formname1 == 'ITR-4') && (assyear == 2014 || assyear == 2015 || assyear == 2016)){
 
 		            fNmae= checkFieldAvl1('//ITRForm:FirstName/text()', 0);
 					try{
@@ -183,7 +183,7 @@ module.exports = {
 					formname1 = checkFieldAvl1('//ITRForm:FormName/text()', 0);
 					assyear = checkFieldAvl1('//ITRForm:AssessmentYear/text()',0);
 
-				if((formname1 == 'ITR-4') && (assyear == 2014 || assyear == 2015 || assyear == 2016 ) || (formname1 == 'ITR-3' && assyear == 2017 )){
+				if((formname1 == 'ITR-4') && (assyear == 2014 || assyear == 2015 || assyear == 2016 ) || (formname1 == 'ITR-3' && (assyear == 2017 || assyear == 2018 ) )){
 					fNmae= checkFieldAvl1('//ITRForm:FirstName/text()', 0);
 					try{
 							//mName= checkFieldAvl('//ITRForm:MiddleName/text()',0);
@@ -298,7 +298,7 @@ module.exports = {
 						              var bsDtls = [];
 									  var header=[];
 
-				if((formname1 == 'ITR-3') && (assyear == 2017) ){
+				if((formname1 == 'ITR-3') && (assyear == 2017 || assyear == 2018) ){
 
 							bsDtls = {
 								bsitr3_OrgName:surNameOrgName,

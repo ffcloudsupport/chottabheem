@@ -1,0 +1,144 @@
+{
+	"ReturnData": [{
+		"RowNum": "1",
+		"PAN": "AIOPS2413H",
+		"A.Y.": "2018-19",
+		"ITR/Form": "ITR-3",
+		"Filing Date": "12/07/2018",
+		"Filing Type": "Original",
+		"Ack. No.": "241232181121018",
+		"Status": "ITR Processed"
+	},{
+		"RowNum": "2",
+		"PAN": "AIOPS2413H",
+		"A.Y.": "2017-18",
+		"ITR/Form": "ITR-3",
+		"Filing Date": "12/10/2017",
+		"Filing Type": "Original",
+		"Ack. No.": "241232181121017",
+		"Status": "ITR Processed"
+	}, {
+		"RowNum": "3",
+		"PAN": "AIOPS2413H",
+		"A.Y.": "2016-17",
+		"ITR/Form": "ITR-4",
+		"Filing Date": "17/10/2016",
+		"Filing Type": "Original",
+		"Ack. No.": "506243461171016",
+		"Status": "ITR Processed"
+	}, {
+		"RowNum": "4",
+		"PAN": "AIOPS2413H",
+		"A.Y.": "2015-16",
+		"ITR/Form": "ITR-4",
+		"Filing Date": "28/08/2015",
+		"Filing Type": "Original",
+		"Ack. No.": "732077850280815",
+		"Status": "ITR Processed"
+	}, {
+		"RowNum": "5",
+		"PAN": "AIOPS2413H",
+		"A.Y.": "2014-15",
+		"ITR/Form": "ITR-2",
+		"Filing Date": "28/07/2014",
+		"Filing Type": "Original",
+		"Ack. No.": "274874970280714",
+		"Status": "ITR Processed"
+	}, {
+		"RowNum": "6",
+		"PAN": "AIOPS2413H",
+		"A.Y.": "2017-18",
+		"Form": "Form 3CB",
+		"Filing Date": "12/10/2017",
+		"Filing Type": "Original",
+		"Filed By": "ARCA008733",
+		"Ack. No.": "239718741121017",
+		"Status": "Successfully e-Filed"
+	}, {
+		"RowNum": "7",
+		"PAN": "AIOPS2413H",
+		"A.Y.": "2016-17",
+		"Form": "Form 3CB",
+		"Filing Date": "17/10/2016",
+		"Filing Type": "Original",
+		"Filed By": "ARCA008733",
+		"Ack. No.": "506242491171016",
+		"Status": "Successfully e-Filed"
+	}],
+	"OutstandingTaxDemand": [{
+		"OutstandingTaxDemandDownloadResult": "NoDemandFound"
+	}],
+	"ITProfile": [{
+		"ITProfileDownloadResult": "Success"
+	}],
+	"Form26AS": [{
+		"RowNum": "1",
+		"Year": "2019",
+		"26ASDownloadResult": "Success"
+	}, {
+		"RowNum": "2",
+		"Year": "2018",
+		"FileDownloadFormat1": "--Select--",
+		"FileDownloadFormat2": "HTML",
+		"FileDownloadFormat3": "Text",
+		"26ASDownloadResult": "Success"
+	}, {
+		"RowNum": "3",
+		"Year": "2017",
+		"FileDownloadFormat1": "--Select--",
+		"FileDownloadFormat2": "HTML",
+		"FileDownloadFormat3": "Text",
+		"26ASDownloadResult": "Success"
+	}, {
+		"RowNum": "4",
+		"Year": "2016",
+		"FileDownloadFormat1": "--Select--",
+		"FileDownloadFormat2": "HTML",
+		"FileDownloadFormat3": "Text",
+		"26ASDownloadResult": "Success"
+	}, {
+		"RowNum": "5",
+		"Year": "2015",
+		"FileDownloadFormat1": "--Select--",
+		"FileDownloadFormat2": "HTML",
+		"FileDownloadFormat3": "Text",
+		"26ASDownloadResult": "Success"
+	}, {
+		"RowNum": "6",
+		"Year": "2014",
+		"26ASDownloadResult": "Success"
+	}, {
+		"RowNum": "7",
+		"Year": "2013",
+		"26ASDownloadResult": "Success"
+	}, {
+		"RowNum": "8",
+		"Year": "2012",
+		"26ASDownloadResult": "Success"
+	}, {
+		"RowNum": "9",
+		"Year": "2011",
+		"26ASDownloadResult": "Success"
+	}, {
+		"RowNum": "10",
+		"Year": "2010",
+		"26ASDownloadResult": "Success"
+	}, {
+		"RowNum": "11",
+		"Year": "2009",
+		"26ASDownloadResult": "Success"
+	}],
+	"OverallResult": "Success",
+	"Postback": [{
+		"FFOrderNo": "BP-23Jul-053",
+		"FFProdCode": "IT_SEM_CRD_100",
+		"Datapull": "IncTax",
+		"PullSeqNo": "1",
+		"GooglePath": "BP-23Jul-053/1/IncTax/001",
+		"TrialNumber": "001",
+		"Status": "Success",
+		"BorrowerName": "null",
+		"BorrowerEmailID": "null",
+		"BorrowerMobile": "null"
+	}]
+}

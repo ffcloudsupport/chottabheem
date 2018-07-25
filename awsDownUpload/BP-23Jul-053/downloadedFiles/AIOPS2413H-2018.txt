@@ -1,0 +1,63 @@
+^Form 26AS^
+
+File Creation Date^Permanent Account Number (PAN)^Current Status of PAN^Financial Year^Assessment Year^Name of Assessee^Address Line 1^Address Line 2^Address Line 3^Address Line 4^Address Line 5^Statecode^Pin Code
+23-07-2018^AIOPS2413H^ACTIVE^2017-2018^2018-2019^HANSA MAFATLAL SHETH^^GANDHI CHAMBERS^NARAYAN NAGAR ROAD^PALDI^AHMEDABAD^GUJARAT^380007
+
+^PART A - Details of Tax Deducted at Source^
+Sr. No.^Name of Deductor^TAN of Deductor^^^^^Total Amount Paid / Credited(Rs.)^Total Tax Deducted(Rs.)^Total TDS Deposited(Rs.)
+1^SHRIRAM FORTUNE SOLUTIONS LIMITED^CHES05991G^^^^^210120.00^21012.00^21012.00^
+^Sr. No.^Section^Transaction Date^Status of Booking^Date of Booking^Remarks^Amount Paid / Credited(Rs.)^Tax Deducted(Rs.)^TDS Deposited(Rs.)
+^1^194IA^12-Mar-2018^F^10-Jun-2018^-^16710.00^1671.00^1671.00^
+^2^194IA^08-Feb-2018^F^10-Jun-2018^-^16710.00^1671.00^1671.00^
+^3^194IA^09-Jan-2018^F^10-Jun-2018^-^16710.00^1671.00^1671.00^
+^4^194IA^26-Dec-2017^F^12-Feb-2018^-^15190.00^1519.00^1519.00^
+^5^194IA^08-Dec-2017^F^12-Feb-2018^-^16710.00^1671.00^1671.00^
+^6^194IA^08-Nov-2017^F^12-Feb-2018^-^16710.00^1671.00^1671.00^
+^7^194IA^07-Oct-2017^F^12-Feb-2018^-^35430.00^3543.00^3543.00^
+^8^194IA^08-Sep-2017^F^09-Nov-2017^-^15190.00^1519.00^1519.00^
+^9^194IA^09-Aug-2017^F^09-Nov-2017^-^15190.00^1519.00^1519.00^
+^10^194IA^01-Jun-2017^F^08-Aug-2017^-^15190.00^1519.00^1519.00^
+^11^194IA^01-May-2017^F^08-Aug-2017^-^15190.00^1519.00^1519.00^
+^12^194IA^01-Apr-2017^F^08-Aug-2017^-^15190.00^1519.00^1519.00^
+
+
+^PART A1 - Details of Tax Deducted at Source for 15G / 15H^
+Sr. No.^Name of Deductor^TAN of Deductor^^^^Total Amount Paid / Credited(Rs.)^Total Tax Deducted(Rs.)^Total TDS Deposited(Rs.)
+^^^*********** No Transactions Present **********^
+
+
+^PART A2 - Details of Tax Deducted at Source on Sale of Immovable Property u/s 194IA/ TDS on Rent of Property u/s 194IB (For Seller/Landlord of Property)^
+Sr. No.^Acknowledgement Number^Name of Deductor^PAN of Deductor^Transaction Date^Total Transaction Amount(Rs.)^Total TDS Deposited(Rs.)
+^^^*********** No Transactions Present **********^
+
+
+^PART B - Details of Tax Collected at Source^
+Sr. No.^Name of Collector^TAN of Collector^^^^^Total Amount Paid / Debited(Rs.)^Total Tax Collected(Rs.)^Total TCS Deposited(Rs.)
+^^^*********** No Transactions Present **********^
+
+
+^PART C - Details of Tax Paid (other than TDS or TCS)^
+Sr. No.^Major Head^Minor Head^Tax(Rs.)^Surcharge(Rs.)^Education Cess(Rs.)^Others(Rs.)^Total Tax(Rs.)^BSR Code^Date of  Deposit^Challan Serial Number^Remarks
+^^^*********** No Transactions Present **********^
+
+
+^PART D - Details of Paid Refund^
+Sr. No.^Assessment Year^Mode^Amount of Refund(Rs.)^Interest(Rs.)^Date of Payment^Remarks
+^^^*********** No Transactions Present **********^
+
+
+^PART E - Details of AIR Transaction^
+Sr. No.^Type of Transaction^Name of AIR Filer^Transaction Date^Single / Joint Party Transaction^Number of Parties^Amount(Rs.)^Mode^Remarks
+^^^*********** No Transactions Present **********^
+
+
+^PART F - Details of Tax Deducted at Source on Sale of Immovable Property u/s 194IA/ TDS on Rent of Property u/s 194IB (For Buyer/Tenant of Property)^
+Sr. No.^Acknowledgement Number^Name of Deductee^PAN of Deductee^Transaction Date^Total Transaction Amount(Rs.)^Total TDS Deposited(Rs.)^Total Amount Deposited other than TDS(Rs.)
+^^^*********** No Transactions Present **********^
+
+
+^PART G - TDS Defaults (Processing of Statements)^
+Sr. No.^Financial Year^Short Payment^Short Deduction^Interest on  TDS Payments Default^Interest on TDS Deduction Default^Late Filing Fee u/s 234E^Interest u/s 220(2)^Total Default
+^^^*********** No Transactions Present **********^
+
+

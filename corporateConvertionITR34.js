@@ -91,7 +91,7 @@ module.exports = {
 					console.log(assyear);
 
 					//if the formName is ITR-3/4 and the year is 2014/2015/2016/2017 it get's executed
-					if(((formname == 'ITR-4') && (assyear == 2014 ||assyear == 2015 ||assyear == 2016 || assyear == 2017)) || (formname == 'ITR-3' && assyear == 2017) ){
+					if(((formname == 'ITR-4') && (assyear == 2014 ||assyear == 2015 ||assyear == 2016 || assyear == 2017)) || (formname == 'ITR-3' && (assyear == 2017 || assyear == 2018)) ){
 
 						saleGood = checkFieldAvl('//ITRForm:SaleOfGoods/text()', 0);
 						saleSer = checkFieldAvl('//ITRForm:SaleOfServices/text()', 0);
@@ -269,7 +269,7 @@ module.exports = {
 					console.log(assyear);
 
 					//if the formName is ITR-3/4 and the year is 2014/2015/2016/2017 it get's executed
-					if(((formname == 'ITR-4') && (assyear == 2014 ||assyear == 2015 ||assyear == 2016 || assyear == 2017)) || (formname == 'ITR-3' && assyear == 2017) ){
+					if(((formname == 'ITR-4') && (assyear == 2014 ||assyear == 2015 ||assyear == 2016 || assyear == 2017)) || (formname == 'ITR-3' && (assyear == 2017 || assyear == 2018)) ){
 
 						saleGood = checkFieldAvl('//ITRForm:SaleOfGoods/text()', 0);
 						saleSer = checkFieldAvl('//ITRForm:SaleOfServices/text()', 0);
@@ -450,7 +450,7 @@ module.exports = {
 			}
 		}
 		//Mapping of json object for ITR-3/4
-		if(((formname == 'ITR-4') && (assyear == 2014 ||assyear == 2015 ||assyear == 2016)) || (formname == 'ITR-3' && assyear == 2017) ){
+		if(((formname == 'ITR-4') && (assyear == 2014 ||assyear == 2015 ||assyear == 2016)) || (formname == 'ITR-3' && (assyear == 2017 || assyear == 2018)) ){
 
 			var parDtls = [];
 			parDtls = {

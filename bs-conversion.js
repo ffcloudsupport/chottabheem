@@ -656,7 +656,7 @@ module.exports = {
 						}
                        // fs.writeFileSync('taxbs.csv', ffcsv);
 						fs.writeFileSync(path1 + orderNo + "/"+ BscsvPath + '/' + orderNo + '_' + pullSeqNo + '_' + type + '_' + assyear + fileEx, ffcsv);
-						fs.writeFileSync(path1 + orderNo + "/"+ path3 + '/' + orderNo + '_' + pullSeqNo + '_' + type + '_' + assyear + fileEx, ffcsv);
+						//fs.writeFileSync(path1 + orderNo + "/"+ path3 + '/' + orderNo + '_' + pullSeqNo + '_' + type + '_' + assyear + fileEx, ffcsv);
 						console.log('BS convertion completed');
                     } else {
 
