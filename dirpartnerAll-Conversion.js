@@ -50,7 +50,7 @@ module.exports = {
 						var select = xpath.useNamespaces({ 'ITRForm': 'http://incometaxindiaefiling.gov.in/master' })
 						assyear = checkFieldAvl('//ITRForm:AssessmentYear/text()',0)
 						var formname1 = checkFieldAvl('//ITRForm:FormName/text()', 0);
-							if((formname1 == 'ITR-3' || formname1 == 'ITR-4') && (assyear == 2014 ||assyear == 2015||assyear == 2016)){
+							if((formname1 == 'ITR-3' || formname1 == 'ITR-4') && (assyear == 2014 ||assyear == 2015||assyear == 2016 || assyear == 2018)){
 									var firstName = checkFieldAvl('//ITRForm:FirstName/text()', 0);
 									var middleName = checkFieldAvl('//ITRForm:MiddleName/text()', 0);
 									var lastName = checkFieldAvl('//ITRForm:SurNameOrOrgName/text()', 0);
@@ -73,7 +73,9 @@ module.exports = {
 										panNumber = 0;
 									}
 							}
-							else if((formname1 == 'ITR-2' || formname1 == 'ITR-3') && (assyear == 2017 || assyear == 2018)){
+												 //changed ItR-3 to ITR-1 (Manoj 27th july 2018)
+
+							else if((formname1 == 'ITR-2' || formname1 == 'ITR-1') && (assyear == 2017 || assyear == 2018)){
 									var firstName = checkFieldAvl('//ITRForm:FirstName/text()', 0);
 									var middleName = checkFieldAvl('//ITRForm:MiddleName/text()', 0);
 									var lastName = checkFieldAvl('//ITRForm:SurNameOrOrgName/text()', 0);
@@ -117,7 +119,7 @@ module.exports = {
 						var select = xpath.useNamespaces({ 'ITRForm': 'http://incometaxindiaefiling.gov.in/master' })
 						assyear = checkFieldAvl('//ITRForm:AssessmentYear/text()',0)
 						var formname1 = checkFieldAvl('//ITRForm:FormName/text()', 0);
-							if((formname1 == 'ITR-3' || formname1 == 'ITR-4') && (assyear == 2014 ||assyear == 2015||assyear == 2016)){
+							if((formname1 == 'ITR-3' || formname1 == 'ITR-4') && (assyear == 2014 ||assyear == 2015||assyear == 2016 || assyear == 2018)){
 									var firstName = checkFieldAvl('//ITRForm:FirstName/text()', 0);
 									var middleName = checkFieldAvl('//ITRForm:MiddleName/text()', 0);
 									var lastName = checkFieldAvl('//ITRForm:SurNameOrOrgName/text()', 0);
@@ -140,7 +142,9 @@ module.exports = {
 										panNumber = 0;
 									}
 							}
-							else if((formname1 == 'ITR-2' || formname1 == 'ITR-3') && (assyear == 2017 || assyear == 2018)){
+												 //changed ItR-3 to ITR-1 (Manoj 27th july 2018)
+
+							else if((formname1 == 'ITR-2' || formname1 == 'ITR-1') && (assyear == 2017 || assyear == 2018)){
 									var firstName = checkFieldAvl('//ITRForm:FirstName/text()', 0);
 									var middleName = checkFieldAvl('//ITRForm:MiddleName/text()', 0);
 									var lastName = checkFieldAvl('//ITRForm:SurNameOrOrgName/text()', 0);
@@ -244,7 +248,7 @@ module.exports = {
 						catch(e){
 							console.log('error'+e);
 						}
-                       fs.writeFileSync(path1 + orderNo + "/"+ partcsvPath + '/' + orderNo + '_' + pullSeqNo + '_' + type + '_' + assyear + fileEx, ffcsv);
+                     	  fs.writeFileSync(path1 + orderNo + "/"+ partcsvPath + '/' + orderNo + '_' + pullSeqNo + '_' + type + '_' + assyear + fileEx, ffcsv);
 						console.log('partnerDir convertion completed');
                     } else {
                        //processing.updateProceFile(orderNo,10,assyear,'FailureOthers');

@@ -1,0 +1,1653 @@
+CallbackModel {
+  domain: null,
+  _events: {},
+  _eventsCount: 0,
+  _maxListeners: undefined,
+  connection: 
+   Connection {
+     domain: null,
+     _events: 
+      { frameError: [Function: bound ],
+        error: [Function: bound emit],
+        close: [Function: bound emit],
+        blocked: [Function: bound emit],
+        unblocked: [Function: bound emit] },
+     _eventsCount: 5,
+     _maxListeners: undefined,
+     stream: 
+      Socket {
+        connecting: false,
+        _hadError: false,
+        _handle: [Object],
+        _parent: null,
+        _host: 'salamander.rmq.cloudamqp.com',
+        _readableState: [Object],
+        readable: true,
+        domain: null,
+        _events: [Object],
+        _eventsCount: 6,
+        _maxListeners: undefined,
+        _writableState: [Object],
+        writable: true,
+        allowHalfOpen: false,
+        destroyed: false,
+        _bytesDispatched: 402,
+        _sockname: null,
+        _pendingData: null,
+        _pendingEncoding: '',
+        server: null,
+        _server: null,
+        read: [Function],
+        _consuming: true },
+     muxer: 
+      Mux {
+        newStreams: [],
+        oldStreams: [],
+        blocked: false,
+        scheduledRead: false,
+        out: [Object] },
+     rest: <Buffer >,
+     frameMax: 4096,
+     sentSinceLastCheck: true,
+     recvSinceLastCheck: true,
+     expectSocketClose: false,
+     freeChannels: BitSet { words: [], wordsInUse: 0 },
+     channels: [ [Object] ],
+     channelMax: 200,
+     heartbeat: 120,
+     heartbeater: 
+      Heart {
+        domain: null,
+        _events: [Object],
+        _eventsCount: 2,
+        _maxListeners: undefined,
+        interval: 120,
+        sendTimer: [Object],
+        recvTimer: [Object] },
+     accept: [Function: mainAccept] } }
+ [*] Waiting for messages in test15. To exit press CTRL+C
+ [x] Received {"Status":"Success","FFOrderNo":"FF00126352","GooglePath":"FF00126352/1/IncTax/001","S3BucketPath":"FF00126352/1/IncTax/001","PullSeqNo":"1","Datapull":"IncTax","FFProdCode":"IT_SEM_INF_100","TrialNumber":"001"}
+glob serverjs file 1
+This is stored into OrdProc: {"Status":"Success","FFOrderNo":"FF00126352","GooglePath":"FF00126352/1/IncTax/001","S3BucketPath":"FF00126352/1/IncTax/001","PullSeqNo":"1","Datapull":"IncTax","FFProdCode":"IT_SEM_INF_100","TrialNumber":"001"}
+FF00126352
+The selected order is:  { _id: 5b5ad647c31b210004821b7b,
+  orderno: 'FF00126352',
+  pullno: '1',
+  pullname: 'IncTax',
+  status: 'Created',
+  remarks: 'Order has been created',
+  __v: 0,
+  created_at: 2018-07-27T08:22:31.509Z }
+This is the data from ejs render: { _id: 5b5ad647c31b210004821b7b,
+  orderno: 'FF00126352',
+  pullno: '1',
+  pullname: 'IncTax',
+  status: 'Created',
+  remarks: 'Order has been created',
+  __v: 0,
+  created_at: 2018-07-27T08:22:31.509Z }
+The order has been successfully saved[object Object]
+The order has been successfully Renamed
+Order created
+awsDownUpload/FF00126352 path removed locally
+saved successfully: { __v: 0,
+  orderno: 'FF00126352',
+  pullno: '1',
+  pullname: 'IncTax',
+  status: 'Created',
+  remarks: 'Order has been created',
+  _id: 5b5ae4d12dddcd219c119410,
+  created_at: 2018-07-27T09:24:33.388Z }
+Copied:  extract/OldFF00126352/
+Inside s3 file  Service {
+  config: 
+   Config {
+     credentials: 
+      Credentials {
+        expired: false,
+        expireTime: null,
+        accessKeyId: 'AKIAJJLR7UP5XHTO26DQ',
+        sessionToken: undefined },
+     credentialProvider: CredentialProviderChain { providers: [Object] },
+     region: 'us-east-1',
+     logger: null,
+     apiVersions: {},
+     apiVersion: null,
+     endpoint: 's3.amazonaws.com',
+     httpOptions: { timeout: 120000 },
+     maxRetries: undefined,
+     maxRedirects: 10,
+     paramValidation: true,
+     sslEnabled: true,
+     s3ForcePathStyle: false,
+     s3BucketEndpoint: false,
+     s3DisableBodySigning: true,
+     computeChecksums: true,
+     convertResponseTypes: true,
+     correctClockSkew: false,
+     customUserAgent: null,
+     dynamoDbCrc32: true,
+     systemClockOffset: 0,
+     signatureVersion: 's3',
+     signatureCache: true,
+     retryDelayOptions: {},
+     useAccelerateEndpoint: false },
+  isGlobalEndpoint: false,
+  endpoint: 
+   Endpoint {
+     protocol: 'https:',
+     host: 's3.amazonaws.com',
+     port: 443,
+     hostname: 's3.amazonaws.com',
+     pathname: '/',
+     path: '/',
+     href: 'https://s3.amazonaws.com/' },
+  _clientId: 1 }
+Bucket : finfort-integrationtest
+prefix :  datapull/FF00126352/
+bucketParams :  { Bucket: 'finfort-integrationtest',
+  Delimiter: '/',
+  Prefix: 'datapull/FF00126352/' }
+contentLength 1
+data { IsTruncated: false,
+  Marker: '',
+  Contents: 
+   [ { Key: 'datapull/FF00126352/',
+       LastModified: 2018-07-16T07:10:22.000Z,
+       ETag: '"d41d8cd98f00b204e9800998ecf8427e"',
+       Size: 0,
+       StorageClass: 'STANDARD',
+       Owner: [Object] } ],
+  Name: 'finfort-integrationtest',
+  Prefix: 'datapull/FF00126352/',
+  Delimiter: '/',
+  MaxKeys: 1000,
+  CommonPrefixes: [ { Prefix: 'datapull/FF00126352/1/' } ] }
+Folder is creted
+destinationfolderid : extract
+get file1 :  { Bucket: 'finfort-integrationtest',
+  Delimiter: '/',
+  Prefix: 'datapull/FF00126352/1/' }
+contentlengthgetfile1 1
+listobjects get file 2 : { Bucket: 'finfort-integrationtest',
+  Delimiter: '/',
+  Prefix: 'datapull/FF00126352/1/IncTax/' }
+get file 2 data; { IsTruncated: false,
+  Marker: '',
+  Contents: 
+   [ { Key: 'datapull/FF00126352/1/IncTax/',
+       LastModified: 2018-07-16T07:10:22.000Z,
+       ETag: '"d41d8cd98f00b204e9800998ecf8427e"',
+       Size: 0,
+       StorageClass: 'STANDARD',
+       Owner: [Object] } ],
+  Name: 'finfort-integrationtest',
+  Prefix: 'datapull/FF00126352/1/IncTax/',
+  Delimiter: '/',
+  MaxKeys: 1000,
+  CommonPrefixes: [ { Prefix: 'datapull/FF00126352/1/IncTax/001/' } ] }
+ctentonlength get file 2:  1
+DataPullSummary.json
+PANSearchResults.json
+Postback.json
+ProfileInfo.json
+datapull/FF00126352/1/IncTax/001/DataPullSummary.json
+DataPullSummary
+datapull/FF00126352/1/IncTax/001/PANSearchResults.json
+PANSearchResults
+datapull/FF00126352/1/IncTax/001/ProfileInfo.json
+ProfileInfo
+getFile4 :  { Bucket: 'finfort-integrationtest',
+  Delimiter: '/',
+  Prefix: 'datapull/FF00126352/1/IncTax/001/ReturnFiled/' }
+datavalue in get file 4 : { IsTruncated: false,
+  Marker: '',
+  Contents: 
+   [ { Key: 'datapull/FF00126352/1/IncTax/001/ReturnFiled/',
+       LastModified: 2018-07-16T07:10:25.000Z,
+       ETag: '"d41d8cd98f00b204e9800998ecf8427e"',
+       Size: 0,
+       StorageClass: 'STANDARD',
+       Owner: [Object] },
+     { Key: 'datapull/FF00126352/1/IncTax/001/ReturnFiled/ViewReturn_null.png',
+       LastModified: 2018-07-16T07:10:27.000Z,
+       ETag: '"9ad66e46e37aeb50f61788ea6910766f"',
+       Size: 114718,
+       StorageClass: 'STANDARD',
+       Owner: [Object] } ],
+  Name: 'finfort-integrationtest',
+  Prefix: 'datapull/FF00126352/1/IncTax/001/ReturnFiled/',
+  Delimiter: '/',
+  MaxKeys: 1000,
+  CommonPrefixes: 
+   [ { Prefix: 'datapull/FF00126352/1/IncTax/001/ReturnFiled/2016/' },
+     { Prefix: 'datapull/FF00126352/1/IncTax/001/ReturnFiled/2017/' },
+     { Prefix: 'datapull/FF00126352/1/IncTax/001/ReturnFiled/2018/' } ] }
+2 ': get file 4 data'
+[ 'datapull',
+  'FF00126352',
+  '1',
+  'IncTax',
+  '001',
+  'ReturnFiled',
+  '2016',
+  '' ]
+[ 'datapull',
+  'FF00126352',
+  '1',
+  'IncTax',
+  '001',
+  'ReturnFiled',
+  '2017',
+  '' ]
+[ 'datapull',
+  'FF00126352',
+  '1',
+  'IncTax',
+  '001',
+  'ReturnFiled',
+  '2018',
+  '' ]
+[ 'datapull',
+  'FF00126352',
+  '1',
+  'IncTax',
+  '001',
+  'ReturnFiled',
+  '2016',
+  '' ]
+2016
+get file 5 :  { Bucket: 'finfort-integrationtest',
+  Delimiter: '/',
+  Prefix: 'datapull/FF00126352/1/IncTax/001/ReturnFiled/2016/' }
+get file 5  { IsTruncated: false,
+  Marker: '',
+  Contents: 
+   [ { Key: 'datapull/FF00126352/1/IncTax/001/ReturnFiled/2016/',
+       LastModified: 2018-07-16T07:10:25.000Z,
+       ETag: '"d41d8cd98f00b204e9800998ecf8427e"',
+       Size: 0,
+       StorageClass: 'STANDARD',
+       Owner: [Object] } ],
+  Name: 'finfort-integrationtest',
+  Prefix: 'datapull/FF00126352/1/IncTax/001/ReturnFiled/2016/',
+  Delimiter: '/',
+  MaxKeys: 1000,
+  CommonPrefixes: [ { Prefix: 'datapull/FF00126352/1/IncTax/001/ReturnFiled/2016/Original/' } ] }
+get file 5  1
+name Original
+get file 6 : [ { Prefix: 'datapull/FF00126352/1/IncTax/001/ReturnFiled/2016/Original/ITR-1/' } ]
+get file 6  :  { IsTruncated: false,
+  Contents: 
+   [ { Key: 'datapull/FF00126352/1/IncTax/001/ReturnFiled/2016/Original/',
+       LastModified: 2018-07-16T07:10:25.000Z,
+       ETag: '"d41d8cd98f00b204e9800998ecf8427e"',
+       Size: 0,
+       StorageClass: 'STANDARD' } ],
+  Name: 'finfort-integrationtest',
+  Prefix: 'datapull/FF00126352/1/IncTax/001/ReturnFiled/2016/Original/',
+  Delimiter: '/',
+  MaxKeys: 1000,
+  CommonPrefixes: [ { Prefix: 'datapull/FF00126352/1/IncTax/001/ReturnFiled/2016/Original/ITR-1/' } ],
+  KeyCount: 2 }
+ITR name : ITR-1
+get file 6[object Object]
+get file 6 1
+get file 7 :  1
+get file 7  :  [ { Prefix: 'datapull/FF00126352/1/IncTax/001/ReturnFiled/2016/Original/ITR-1/20180216/' } ]
+{ Bucket: 'finfort-integrationtest',
+  Key: 'datapull/FF00126352/1/IncTax/001/ReturnFiled/2016/Original/ITR-1/20180216/398859720160218/2018-07-07-16-26-28-217_1182930502_.xml' }
+5
+[ 'datapull',
+  'FF00126352',
+  '1',
+  'IncTax',
+  '001',
+  'ReturnFiled',
+  '2016',
+  '' ]
+[ 'datapull',
+  'FF00126352',
+  '1',
+  'IncTax',
+  '001',
+  'ReturnFiled',
+  '2017',
+  '' ]
+2017
+get file 5 :  { Bucket: 'finfort-integrationtest',
+  Delimiter: '/',
+  Prefix: 'datapull/FF00126352/1/IncTax/001/ReturnFiled/2017/' }
+get file 5  { IsTruncated: false,
+  Marker: '',
+  Contents: 
+   [ { Key: 'datapull/FF00126352/1/IncTax/001/ReturnFiled/2017/',
+       LastModified: 2018-07-16T07:10:26.000Z,
+       ETag: '"d41d8cd98f00b204e9800998ecf8427e"',
+       Size: 0,
+       StorageClass: 'STANDARD',
+       Owner: [Object] } ],
+  Name: 'finfort-integrationtest',
+  Prefix: 'datapull/FF00126352/1/IncTax/001/ReturnFiled/2017/',
+  Delimiter: '/',
+  MaxKeys: 1000,
+  CommonPrefixes: [ { Prefix: 'datapull/FF00126352/1/IncTax/001/ReturnFiled/2017/Original/' } ] }
+get file 5  1
+name Original
+get file 6 : [ { Prefix: 'datapull/FF00126352/1/IncTax/001/ReturnFiled/2017/Original/ITR-1/' } ]
+get file 6  :  { IsTruncated: false,
+  Contents: 
+   [ { Key: 'datapull/FF00126352/1/IncTax/001/ReturnFiled/2017/Original/',
+       LastModified: 2018-07-16T07:10:26.000Z,
+       ETag: '"d41d8cd98f00b204e9800998ecf8427e"',
+       Size: 0,
+       StorageClass: 'STANDARD' } ],
+  Name: 'finfort-integrationtest',
+  Prefix: 'datapull/FF00126352/1/IncTax/001/ReturnFiled/2017/Original/',
+  Delimiter: '/',
+  MaxKeys: 1000,
+  CommonPrefixes: [ { Prefix: 'datapull/FF00126352/1/IncTax/001/ReturnFiled/2017/Original/ITR-1/' } ],
+  KeyCount: 2 }
+ITR name : ITR-1
+get file 6[object Object]
+get file 6 1
+get file 7 :  1
+get file 7  :  [ { Prefix: 'datapull/FF00126352/1/IncTax/001/ReturnFiled/2017/Original/ITR-1/20180216/' } ]
+{ Bucket: 'finfort-integrationtest',
+  Key: 'datapull/FF00126352/1/IncTax/001/ReturnFiled/2017/Original/ITR-1/20180216/398866340160218/2018-07-07-16-25-56-364_-620484159_.xml' }
+5
+[ 'datapull',
+  'FF00126352',
+  '1',
+  'IncTax',
+  '001',
+  'ReturnFiled',
+  '2016',
+  '' ]
+[ 'datapull',
+  'FF00126352',
+  '1',
+  'IncTax',
+  '001',
+  'ReturnFiled',
+  '2017',
+  '' ]
+[ 'datapull',
+  'FF00126352',
+  '1',
+  'IncTax',
+  '001',
+  'ReturnFiled',
+  '2018',
+  '' ]
+2018
+get file 5 :  { Bucket: 'finfort-integrationtest',
+  Delimiter: '/',
+  Prefix: 'datapull/FF00126352/1/IncTax/001/ReturnFiled/2018/' }
+get file 5  { IsTruncated: false,
+  Marker: '',
+  Contents: 
+   [ { Key: 'datapull/FF00126352/1/IncTax/001/ReturnFiled/2018/',
+       LastModified: 2018-07-16T07:10:26.000Z,
+       ETag: '"d41d8cd98f00b204e9800998ecf8427e"',
+       Size: 0,
+       StorageClass: 'STANDARD',
+       Owner: [Object] } ],
+  Name: 'finfort-integrationtest',
+  Prefix: 'datapull/FF00126352/1/IncTax/001/ReturnFiled/2018/',
+  Delimiter: '/',
+  MaxKeys: 1000,
+  CommonPrefixes: [ { Prefix: 'datapull/FF00126352/1/IncTax/001/ReturnFiled/2018/Original/' } ] }
+get file 5  1
+name Original
+get file 6 : [ { Prefix: 'datapull/FF00126352/1/IncTax/001/ReturnFiled/2018/Original/ITR-1/' } ]
+get file 6  :  { IsTruncated: false,
+  Contents: 
+   [ { Key: 'datapull/FF00126352/1/IncTax/001/ReturnFiled/2018/Original/',
+       LastModified: 2018-07-16T07:10:26.000Z,
+       ETag: '"d41d8cd98f00b204e9800998ecf8427e"',
+       Size: 0,
+       StorageClass: 'STANDARD' } ],
+  Name: 'finfort-integrationtest',
+  Prefix: 'datapull/FF00126352/1/IncTax/001/ReturnFiled/2018/Original/',
+  Delimiter: '/',
+  MaxKeys: 1000,
+  CommonPrefixes: [ { Prefix: 'datapull/FF00126352/1/IncTax/001/ReturnFiled/2018/Original/ITR-1/' } ],
+  KeyCount: 2 }
+ITR name : ITR-1
+get file 6[object Object]
+get file 6 1
+get file 7 :  1
+get file 7  :  [ { Prefix: 'datapull/FF00126352/1/IncTax/001/ReturnFiled/2018/Original/ITR-1/20180630/' } ]
+{ Bucket: 'finfort-integrationtest',
+  Key: 'datapull/FF00126352/1/IncTax/001/ReturnFiled/2018/Original/ITR-1/20180630/696473470300618/2018-07-07-16-25-24-405_-540783235_.xml' }
+5
+success : true
+awsDownUpload/FF00126352/uploadedfiles
+callengine-2  34
+Engine Started , the order no is:  FF00126352
+[ '2015', '2016', '2017', '2018' ]
+[ '2015', '2016', '2017', '2018' ]
+2018..............107
+text Files are not Found
+2017..............107
+text Files are not Found
+2016..............107
+text Files are not Found
+2015..............107
+text Files are not Found
+2018..............133
+All items : [ '2016Original.xml',
+  '2017Original.xml',
+  '2018Original.xml',
+  'DataPullSummary.json',
+  'destID.txt',
+  'PANSearchResults.json',
+  'ProfileInfo.json' ]
+All items : [ '2016Original.xml',
+  '2017Original.xml',
+  '2018Original.xml',
+  'DataPullSummary.json',
+  'destID.txt',
+  'PANSearchResults.json',
+  'ProfileInfo.json' ]
+All items : [ '2016Original.xml',
+  '2017Original.xml',
+  '2018Original.xml',
+  'DataPullSummary.json',
+  'destID.txt',
+  'PANSearchResults.json',
+  'ProfileInfo.json' ]
+./awsDownUpload//FF00126352//downloadedFiles/2018Original.xml
+original file size : 2018Original.xml 5604
+All items : [ '2016Original.xml',
+  '2017Original.xml',
+  '2018Original.xml',
+  'DataPullSummary.json',
+  'destID.txt',
+  'PANSearchResults.json',
+  'ProfileInfo.json' ]
+All items : [ '2016Original.xml',
+  '2017Original.xml',
+  '2018Original.xml',
+  'DataPullSummary.json',
+  'destID.txt',
+  'PANSearchResults.json',
+  'ProfileInfo.json' ]
+All items : [ '2016Original.xml',
+  '2017Original.xml',
+  '2018Original.xml',
+  'DataPullSummary.json',
+  'destID.txt',
+  'PANSearchResults.json',
+  'ProfileInfo.json' ]
+All items : [ '2016Original.xml',
+  '2017Original.xml',
+  '2018Original.xml',
+  'DataPullSummary.json',
+  'destID.txt',
+  'PANSearchResults.json',
+  'ProfileInfo.json' ]
+2018Original.xml undefined 1
+itreturn conversion started
+[ '2018' ] [ 'ITR-1' ]
+FF00126352 1 2018 30/06/2018 undefined undefined
+Return uploaded, pending for ITR-V/ E-Verification..........................
+greater than 2016 ITR Forms are not Applicable to Process
+FF00126352 8 2018 [ 'ExtraInfo_Orig_FF00126352_1_ITR-1_2018.json' ] undefined undefined
+FF00126352 100 2018 FF00126352_1_ITR-1_2018.csv ITR-1 undefined
+Original file found
+2018
+ITR-1
+BHARAT
+KHARE
+[ { FormName__c: 'ITR-1',
+    Year__c: '2018',
+    FirmName__c: 0,
+    ShareOfProfit__c: 0,
+    AmtShareOfProfit__c: 0,
+    ShareInCap__c: 0,
+    SalBonComm__c: 0,
+    Interest__c: 0,
+    NetInc__c: 0 } ]
+partner convertion completed
+[ { BankName__c: 'CENTRAL BANK OF INDIA',
+    IFSC_Code__c: 'CBIN0280234',
+    Account_Number__c: '3537580091\'',
+    AccountType__c: '',
+    Year__c: '2018' } ]
+bank convertion completed
+2018Original.xml undefined 2018 FF00126352 1
+original file found
+0
+Original found
+....................................37BS
+2018Original.xml undefined 2018 FF00126352 1
+Original found
+no data found
+2018Original.xml undefined 2018 FF00126352 1
+original file found
+ITR-1
+2018
+2018
+ITR-1
+partnerDir convertion completed
+In Profile Func
+./awsDownUpload/FF00126352/downloadedFiles/ProfileInfo
+true
+profile has started
+FF00126352 101 0 bdepk5961l21061980 undefined undefined
+Profile.json not found
+FF00126352 12 0 FailureJSONFileNotFound undefined undefined
+2017..............133
+All items : [ '2016Original.xml',
+  '2017Original.xml',
+  '2018Original.xml',
+  'DataPullSummary.json',
+  'destID.txt',
+  'PANSearchResults.json',
+  'ProfileInfo.json' ]
+All items : [ '2016Original.xml',
+  '2017Original.xml',
+  '2018Original.xml',
+  'DataPullSummary.json',
+  'destID.txt',
+  'PANSearchResults.json',
+  'ProfileInfo.json' ]
+./awsDownUpload//FF00126352//downloadedFiles/2017Original.xml
+original file size : 2017Original.xml 6559
+All items : [ '2016Original.xml',
+  '2017Original.xml',
+  '2018Original.xml',
+  'DataPullSummary.json',
+  'destID.txt',
+  'PANSearchResults.json',
+  'ProfileInfo.json' ]
+All items : [ '2016Original.xml',
+  '2017Original.xml',
+  '2018Original.xml',
+  'DataPullSummary.json',
+  'destID.txt',
+  'PANSearchResults.json',
+  'ProfileInfo.json' ]
+All items : [ '2016Original.xml',
+  '2017Original.xml',
+  '2018Original.xml',
+  'DataPullSummary.json',
+  'destID.txt',
+  'PANSearchResults.json',
+  'ProfileInfo.json' ]
+All items : [ '2016Original.xml',
+  '2017Original.xml',
+  '2018Original.xml',
+  'DataPullSummary.json',
+  'destID.txt',
+  'PANSearchResults.json',
+  'ProfileInfo.json' ]
+All items : [ '2016Original.xml',
+  '2017Original.xml',
+  '2018Original.xml',
+  'DataPullSummary.json',
+  'destID.txt',
+  'PANSearchResults.json',
+  'ProfileInfo.json' ]
+2017Original.xml undefined 1
+itreturn conversion started
+[ '2017' ] [ 'ITR-1' ]
+FF00126352 1 2017 16/02/2018 undefined undefined
+ITR Processed..........................
+FF00126352 8 2017 [ 'ExtraInfo_Orig_FF00126352_1_ITR-1_2017.json' ] undefined undefined
+FF00126352 100 2017 FF00126352_1_ITR-1_2017.csv ITR-1 undefined
+Original file found
+2017
+ITR-1
+BHARAT
+KHARE
+[ { FormName__c: 'ITR-1',
+    Year__c: '2017',
+    FirmName__c: 0,
+    ShareOfProfit__c: 0,
+    AmtShareOfProfit__c: 0,
+    ShareInCap__c: 0,
+    SalBonComm__c: 0,
+    Interest__c: 0,
+    NetInc__c: 0 } ]
+partner convertion completed
+[ { BankName__c: 'CENTRAL BANK OF INDIA',
+    IFSC_Code__c: 'CBIN0280234',
+    Account_Number__c: '3537580091\'',
+    AccountType__c: '',
+    Year__c: '2017' } ]
+bank convertion completed
+2017Original.xml undefined 2017 FF00126352 1
+original file found
+0
+Original found
+....................................37BS
+2017Original.xml undefined 2017 FF00126352 1
+Original found
+no data found
+2017Original.xml undefined 2017 FF00126352 1
+original file found
+ITR-1
+2017
+2016..............133
+All items : [ '2016Original.xml',
+  '2017Original.xml',
+  '2018Original.xml',
+  'DataPullSummary.json',
+  'destID.txt',
+  'PANSearchResults.json',
+  'ProfileInfo.json' ]
+./awsDownUpload//FF00126352//downloadedFiles/2016Original.xml
+original file size : 2016Original.xml 6596
+All items : [ '2016Original.xml',
+  '2017Original.xml',
+  '2018Original.xml',
+  'DataPullSummary.json',
+  'destID.txt',
+  'PANSearchResults.json',
+  'ProfileInfo.json' ]
+All items : [ '2016Original.xml',
+  '2017Original.xml',
+  '2018Original.xml',
+  'DataPullSummary.json',
+  'destID.txt',
+  'PANSearchResults.json',
+  'ProfileInfo.json' ]
+All items : [ '2016Original.xml',
+  '2017Original.xml',
+  '2018Original.xml',
+  'DataPullSummary.json',
+  'destID.txt',
+  'PANSearchResults.json',
+  'ProfileInfo.json' ]
+All items : [ '2016Original.xml',
+  '2017Original.xml',
+  '2018Original.xml',
+  'DataPullSummary.json',
+  'destID.txt',
+  'PANSearchResults.json',
+  'ProfileInfo.json' ]
+All items : [ '2016Original.xml',
+  '2017Original.xml',
+  '2018Original.xml',
+  'DataPullSummary.json',
+  'destID.txt',
+  'PANSearchResults.json',
+  'ProfileInfo.json' ]
+All items : [ '2016Original.xml',
+  '2017Original.xml',
+  '2018Original.xml',
+  'DataPullSummary.json',
+  'destID.txt',
+  'PANSearchResults.json',
+  'ProfileInfo.json' ]
+2016Original.xml undefined 1
+itreturn conversion started
+[ '2016' ] [ 'ITR-1' ]
+FF00126352 1 2016 16/02/2018 undefined undefined
+ITR Processed..........................
+FF00126352 8 2016 [ 'ExtraInfo_Orig_FF00126352_1_ITR-1_2016.json' ] undefined undefined
+FF00126352 100 2016 FF00126352_1_ITR-1_2016.csv ITR-1 undefined
+Original file found
+2016
+ITR-1
+BHARAT
+KHARE
+[ { FormName__c: 'ITR-1',
+    Year__c: '2016',
+    FirmName__c: 0,
+    ShareOfProfit__c: 0,
+    AmtShareOfProfit__c: 0,
+    ShareInCap__c: 0,
+    SalBonComm__c: 0,
+    Interest__c: 0,
+    NetInc__c: 0 } ]
+partner convertion completed
+[ { BankName__c: 'CENTRAL BANK OF INDIA',
+    IFSC_Code__c: 'CBIN0280234',
+    Account_Number__c: '3537580091\'',
+    AccountType__c: 'SAV',
+    Year__c: '2016' } ]
+bank convertion completed
+2016Original.xml undefined 2016 FF00126352 1
+original file found
+0
+Original found
+....................................37BS
+2016Original.xml undefined 2016 FF00126352 1
+Original found
+no data found
+2016Original.xml undefined 2016 FF00126352 1
+original file found
+ITR-1
+2016
+2015..............133
+All items : [ '2016Original.xml',
+  '2017Original.xml',
+  '2018Original.xml',
+  'DataPullSummary.json',
+  'destID.txt',
+  'PANSearchResults.json',
+  'ProfileInfo.json' ]
+All items : [ '2016Original.xml',
+  '2017Original.xml',
+  '2018Original.xml',
+  'DataPullSummary.json',
+  'destID.txt',
+  'PANSearchResults.json',
+  'ProfileInfo.json' ]
+All items : [ '2016Original.xml',
+  '2017Original.xml',
+  '2018Original.xml',
+  'DataPullSummary.json',
+  'destID.txt',
+  'PANSearchResults.json',
+  'ProfileInfo.json' ]
+All items : [ '2016Original.xml',
+  '2017Original.xml',
+  '2018Original.xml',
+  'DataPullSummary.json',
+  'destID.txt',
+  'PANSearchResults.json',
+  'ProfileInfo.json' ]
+All items : [ '2016Original.xml',
+  '2017Original.xml',
+  '2018Original.xml',
+  'DataPullSummary.json',
+  'destID.txt',
+  'PANSearchResults.json',
+  'ProfileInfo.json' ]
+All items : [ '2016Original.xml',
+  '2017Original.xml',
+  '2018Original.xml',
+  'DataPullSummary.json',
+  'destID.txt',
+  'PANSearchResults.json',
+  'ProfileInfo.json' ]
+All items : [ '2016Original.xml',
+  '2017Original.xml',
+  '2018Original.xml',
+  'DataPullSummary.json',
+  'destID.txt',
+  'PANSearchResults.json',
+  'ProfileInfo.json' ]
+FF00126352_BDAll_2016.csv,FF00126352_BDAll_2017.csv,FF00126352_BDAll_2018.csv.....................................
+awsDownUpload/FF00126352/BankCsvFiles/FF00126352_BDAll_2016.csv...................................
+awsDownUpload/FF00126352/BankCsvFiles/FF00126352_BDAll_2017.csv...................................
+awsDownUpload/FF00126352/BankCsvFiles/FF00126352_BDAll_2018.csv...................................
+Error: ENOENT: no such file or directory, scandir 'D:\chottabheem\awsDownUpload\FF00126352\PLCsvFiles'no files
+Error: ENOENT: no such file or directory, scandir 'D:\chottabheem\awsDownUpload\FF00126352\BsCsvFiles'no files
+FFtext Parser.js started ./awsDownUpload/FF00126352/downloadedFiles/undefined2018
+{ Error: ENOENT: no such file or directory, open 'D:\chottabheem\awsDownUpload\FF00126352\downloadedFiles\undefined'
+    at Error (native)
+    at Object.fs.openSync (fs.js:641:18)
+    at Object.fs.readFileSync (fs.js:509:33)
+    at Object.TaxincParser (D:\chottabheem\taxInc.js:72:18)
+    at Object.TextPart (D:\chottabheem\26Asyear.js:71:11)
+    at Object.CallEngine (D:\chottabheem\FFEngine.js:248:15)
+    at Function.sync.fiber (D:\chottabheem\s3DownloadFunc.js:232:23)
+    at D:\chottabheem\node_modules\synchronize\sync.js:281:10
+  errno: -4058,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: 'D:\\chottabheem\\awsDownUpload\\FF00126352\\downloadedFiles\\undefined' }
+otd Error: ENOENT: no such file or directory, stat 'D:\chottabheem\awsDownUpload\FF00126352\downloadedFiles\OutstandingDemand.json'
+FF00126352 14 0 FailureJSONFileNotFound undefined undefined
+FF00126352 17 2015 0 undefined undefined
+FF00126352 17 2016 0 undefined undefined
+FF00126352 17 2017 0 undefined undefined
+FF00126352 17 2018 0 undefined undefined
+pan started
+FF00126352 25 0 FF00126352_1_panDet.csv undefined undefined
+./awsDownUpload/FF00126352/downloadedFiles/DINSearch_ListOfCompanies.json
+din Error: ENOENT: no such file or directory, stat 'D:\chottabheem\awsDownUpload\FF00126352\downloadedFiles\DINSearch_ListOfCompanies.json'
+./awsDownUpload/FF00126352/downloadedFiles/DINSearch_NameAndDOBResults.json
+all Engine operations done
+Line of 172 - uploadFunc - inside try 
+./awsDownUpload/FF00126352/downloadedFiles
+zero KB file
+zero KB file
+zero KB file
+bankCSV conversion completed
+bankCSV conversion completed
+bankCSV conversion completed
+DestFolderID[ForThisOrder]: extract/FF00126352/IT/001
+Str Parallel Limit : 1
+Int Parallel Limit: 1
+gdrxworkwrapper Starting Work on item : ExtraInfo_Orig_FF00126352_1_ITR-1_2016.json
+Slkjlkjljj; ExtraInfo_Orig_FF00126352_1_ITR-1_2016.json
+Starting GDRxWorker -- This is : ExtraInfo_Orig_FF00126352_1_ITR-1_2016.json count : 0
+Dest Folder ID : extract/FF00126352/IT/001
+File Path : ./awsDownUpload/FF00126352/uploadedfiles/ExtraInfo_Orig_FF00126352_1_ITR-1_2016.json
+Ending GDRxWorker (success)-- This is : ExtraInfo_Orig_FF00126352_1_ITR-1_2016.json File count : 0
+File ID:  finfort-integrationtest/extract/FF00126352/IT/001
+File uploaded successfully  1
+Async function finished processing (success)
+gdrxworkwrapper Starting Work on item : ExtraInfo_Orig_FF00126352_1_ITR-1_2017.json
+Slkjlkjljj; ExtraInfo_Orig_FF00126352_1_ITR-1_2017.json
+Starting GDRxWorker -- This is : ExtraInfo_Orig_FF00126352_1_ITR-1_2017.json count : 1
+Dest Folder ID : extract/FF00126352/IT/001
+File Path : ./awsDownUpload/FF00126352/uploadedfiles/ExtraInfo_Orig_FF00126352_1_ITR-1_2017.json
+Ending GDRxWorker (success)-- This is : ExtraInfo_Orig_FF00126352_1_ITR-1_2017.json File count : 1
+File ID:  finfort-integrationtest/extract/FF00126352/IT/001
+File uploaded successfully  2
+Async function finished processing (success)
+gdrxworkwrapper Starting Work on item : ExtraInfo_Orig_FF00126352_1_ITR-1_2018.json
+Slkjlkjljj; ExtraInfo_Orig_FF00126352_1_ITR-1_2018.json
+Starting GDRxWorker -- This is : ExtraInfo_Orig_FF00126352_1_ITR-1_2018.json count : 2
+Dest Folder ID : extract/FF00126352/IT/001
+File Path : ./awsDownUpload/FF00126352/uploadedfiles/ExtraInfo_Orig_FF00126352_1_ITR-1_2018.json
+Ending GDRxWorker (success)-- This is : ExtraInfo_Orig_FF00126352_1_ITR-1_2018.json File count : 2
+File ID:  finfort-integrationtest/extract/FF00126352/IT/001
+File uploaded successfully  3
+Async function finished processing (success)
+gdrxworkwrapper Starting Work on item : FF00126352ProcessingResult.json
+Slkjlkjljj; FF00126352ProcessingResult.json
+Starting GDRxWorker -- This is : FF00126352ProcessingResult.json count : 3
+Dest Folder ID : extract/FF00126352/IT/001
+File Path : ./awsDownUpload/FF00126352/uploadedfiles/FF00126352ProcessingResult.json
+Ending GDRxWorker (success)-- This is : FF00126352ProcessingResult.json File count : 3
+File ID:  finfort-integrationtest/extract/FF00126352/IT/001
+File uploaded successfully  4
+Async function finished processing (success)
+gdrxworkwrapper Starting Work on item : FF00126352_1_BankAll.csv
+Slkjlkjljj; FF00126352_1_BankAll.csv
+Starting GDRxWorker -- This is : FF00126352_1_BankAll.csv count : 4
+Dest Folder ID : extract/FF00126352/IT/001
+File Path : ./awsDownUpload/FF00126352/uploadedfiles/FF00126352_1_BankAll.csv
+Ending GDRxWorker (success)-- This is : FF00126352_1_BankAll.csv File count : 4
+File ID:  finfort-integrationtest/extract/FF00126352/IT/001
+File uploaded successfully  5
+Async function finished processing (success)
+gdrxworkwrapper Starting Work on item : FF00126352_1_DirDetPart_2018.csv
+Slkjlkjljj; FF00126352_1_DirDetPart_2018.csv
+Starting GDRxWorker -- This is : FF00126352_1_DirDetPart_2018.csv count : 5
+Dest Folder ID : extract/FF00126352/IT/001
+File Path : ./awsDownUpload/FF00126352/uploadedfiles/FF00126352_1_DirDetPart_2018.csv
+Ending GDRxWorker (success)-- This is : FF00126352_1_DirDetPart_2018.csv File count : 5
+File ID:  finfort-integrationtest/extract/FF00126352/IT/001
+File uploaded successfully  6
+Async function finished processing (success)
+gdrxworkwrapper Starting Work on item : FF00126352_1_ITR-1_2016.csv
+Slkjlkjljj; FF00126352_1_ITR-1_2016.csv
+Starting GDRxWorker -- This is : FF00126352_1_ITR-1_2016.csv count : 6
+Dest Folder ID : extract/FF00126352/IT/001
+File Path : ./awsDownUpload/FF00126352/uploadedfiles/FF00126352_1_ITR-1_2016.csv
+Ending GDRxWorker (success)-- This is : FF00126352_1_ITR-1_2016.csv File count : 6
+File ID:  finfort-integrationtest/extract/FF00126352/IT/001
+File uploaded successfully  7
+Async function finished processing (success)
+gdrxworkwrapper Starting Work on item : FF00126352_1_ITR-1_2017.csv
+Slkjlkjljj; FF00126352_1_ITR-1_2017.csv
+Starting GDRxWorker -- This is : FF00126352_1_ITR-1_2017.csv count : 7
+Dest Folder ID : extract/FF00126352/IT/001
+File Path : ./awsDownUpload/FF00126352/uploadedfiles/FF00126352_1_ITR-1_2017.csv
+Ending GDRxWorker (success)-- This is : FF00126352_1_ITR-1_2017.csv File count : 7
+File ID:  finfort-integrationtest/extract/FF00126352/IT/001
+File uploaded successfully  8
+Async function finished processing (success)
+gdrxworkwrapper Starting Work on item : FF00126352_1_ITR-1_2018.csv
+Slkjlkjljj; FF00126352_1_ITR-1_2018.csv
+Starting GDRxWorker -- This is : FF00126352_1_ITR-1_2018.csv count : 8
+Dest Folder ID : extract/FF00126352/IT/001
+File Path : ./awsDownUpload/FF00126352/uploadedfiles/FF00126352_1_ITR-1_2018.csv
+Ending GDRxWorker (success)-- This is : FF00126352_1_ITR-1_2018.csv File count : 8
+File ID:  finfort-integrationtest/extract/FF00126352/IT/001
+File uploaded successfully  9
+Async function finished processing (success)
+gdrxworkwrapper Starting Work on item : FF00126352_1_panDet.csv
+Slkjlkjljj; FF00126352_1_panDet.csv
+Starting GDRxWorker -- This is : FF00126352_1_panDet.csv count : 9
+Dest Folder ID : extract/FF00126352/IT/001
+File Path : ./awsDownUpload/FF00126352/uploadedfiles/FF00126352_1_panDet.csv
+Ending GDRxWorker (success)-- This is : FF00126352_1_panDet.csv File count : 9
+File ID:  finfort-integrationtest/extract/FF00126352/IT/001
+File uploaded successfully  10
+Async function finished processing (success)
+gdrxworkwrapper Starting Work on item : FF00126352_1_Partner_2016.csv
+Slkjlkjljj; FF00126352_1_Partner_2016.csv
+Starting GDRxWorker -- This is : FF00126352_1_Partner_2016.csv count : 10
+Dest Folder ID : extract/FF00126352/IT/001
+File Path : ./awsDownUpload/FF00126352/uploadedfiles/FF00126352_1_Partner_2016.csv
+Ending GDRxWorker (success)-- This is : FF00126352_1_Partner_2016.csv File count : 10
+File ID:  finfort-integrationtest/extract/FF00126352/IT/001
+File uploaded successfully  11
+Async function finished processing (success)
+gdrxworkwrapper Starting Work on item : FF00126352_1_Partner_2017.csv
+Slkjlkjljj; FF00126352_1_Partner_2017.csv
+Starting GDRxWorker -- This is : FF00126352_1_Partner_2017.csv count : 11
+Dest Folder ID : extract/FF00126352/IT/001
+File Path : ./awsDownUpload/FF00126352/uploadedfiles/FF00126352_1_Partner_2017.csv
+Ending GDRxWorker (success)-- This is : FF00126352_1_Partner_2017.csv File count : 11
+File ID:  finfort-integrationtest/extract/FF00126352/IT/001
+File uploaded successfully  12
+Async function finished processing (success)
+gdrxworkwrapper Starting Work on item : FF00126352_1_Partner_2018.csv
+Slkjlkjljj; FF00126352_1_Partner_2018.csv
+Starting GDRxWorker -- This is : FF00126352_1_Partner_2018.csv count : 12
+Dest Folder ID : extract/FF00126352/IT/001
+File Path : ./awsDownUpload/FF00126352/uploadedfiles/FF00126352_1_Partner_2018.csv
+Ending GDRxWorker (success)-- This is : FF00126352_1_Partner_2018.csv File count : 12
+File ID:  finfort-integrationtest/extract/FF00126352/IT/001
+File uploaded successfully  13
+Async function finished processing (success)
+Inside gdfirstErrorOrFinalDone
+Async.Each -- All Items processed successfully
+File uploaded successfully  13
+process completed
+ glob before : 1
+glob Before sending ack GCH:[object Object]
+glob Before sending ack gorder:{"fields":{"consumerTag":"amq.ctag-3IFKJ0KG7mKWA5cP1UiI4Q","deliveryTag":1,"redelivered":false,"exchange":"","routingKey":"test15"},"properties":{"headers":{}},"content":{"type":"Buffer","data":[123,34,83,116,97,116,117,115,34,58,34,83,117,99,99,101,115,115,34,44,34,70,70,79,114,100,101,114,78,111,34,58,34,70,70,48,48,49,50,54,51,53,50,34,44,34,71,111,111,103,108,101,80,97,116,104,34,58,34,70,70,48,48,49,50,54,51,53,50,47,49,47,73,110,99,84,97,120,47,48,48,49,34,44,34,83,51,66,117,99,107,101,116,80,97,116,104,34,58,34,70,70,48,48,49,50,54,51,53,50,47,49,47,73,110,99,84,97,120,47,48,48,49,34,44,34,80,117,108,108,83,101,113,78,111,34,58,34,49,34,44,34,68,97,116,97,112,117,108,108,34,58,34,73,110,99,84,97,120,34,44,34,70,70,80,114,111,100,67,111,100,101,34,58,34,73,84,95,83,69,77,95,73,78,70,95,49,48,48,34,44,34,84,114,105,97,108,78,117,109,98,101,114,34,58,34,48,48,49,34,125]}}
+glob Aftersendingack :[object Object]
+ glob after : 5
+The order object has been sent
+The selected order is:  { _id: 5b5ae22c4dc39823701d35e3,
+  orderno: 'FF00126352',
+  pullno: '1',
+  pullname: 'IncTax',
+  status: 'Created',
+  remarks: 'Order has been created',
+  __v: 0,
+  created_at: 2018-07-27T09:13:16.961Z }
+FF00126352 102 0 LoginFailure undefined undefined
+503 '<!DOCTYPE html>\n\t<html>\n\t  <head>\n\t\t<meta name="viewport" content="width=device-width, initial-scale=1">\n\t\t<meta charset="utf-8">\n\t\t<title>Offline for Maintenance</title>\n\t\t<style media="screen">\n\t\t  html,body,iframe {\n\t\t\tmargin: 0;\n\t\t\tpadding: 0;\n\t\t  }\n\t\t  html,body {\n\t\t\theight: 100%;\n\t\t\toverflow: hidden;\n\t\t  }\n\t\t  iframe {\n\t\t\twidth: 100%;\n\t\t\theight: 100%;\n\t\t\tborder: 0;\n\t\t  }\n\t\t</style>\n\t  </head>\n\t  <body>\n\t\t<iframe src="//www.herokucdn.com/error-pages/maintenance-mode.html"></iframe>\n\t  </body>\n\t</html>'
+ mail sent Sucessfully
+ [x] Received {"Status":"Success","FFOrderNo":"FF00126352-test","GooglePath":"FF00126352-test/1/IncTax/001","S3BucketPath":"FF00126352-test/1/IncTax/001","PullSeqNo":"1","Datapull":"IncTax","FFProdCode":"IT_SEM_INF_100","TrialNumber":"001"}
+glob serverjs file 1
+This is stored into OrdProc: {"Status":"Success","FFOrderNo":"FF00126352-test","GooglePath":"FF00126352-test/1/IncTax/001","S3BucketPath":"FF00126352-test/1/IncTax/001","PullSeqNo":"1","Datapull":"IncTax","FFProdCode":"IT_SEM_INF_100","TrialNumber":"001"}
+FF00126352-test
+The selected order is:  null
+Order created 1
+awsDownUpload/FF00126352-test does not exist locally
+saved successfully: { __v: 0,
+  orderno: 'FF00126352-test',
+  pullno: '1',
+  pullname: 'IncTax',
+  status: 'Created',
+  remarks: 'Order has been created',
+  _id: 5b5ae7732dddcd219c119411,
+  created_at: 2018-07-27T09:35:47.349Z }
+Inside s3 file  Service {
+  config: 
+   Config {
+     credentials: 
+      Credentials {
+        expired: false,
+        expireTime: null,
+        accessKeyId: 'AKIAJJLR7UP5XHTO26DQ',
+        sessionToken: undefined },
+     credentialProvider: CredentialProviderChain { providers: [Object] },
+     region: 'us-east-1',
+     logger: null,
+     apiVersions: {},
+     apiVersion: null,
+     endpoint: 's3.amazonaws.com',
+     httpOptions: { timeout: 120000 },
+     maxRetries: undefined,
+     maxRedirects: 10,
+     paramValidation: true,
+     sslEnabled: true,
+     s3ForcePathStyle: false,
+     s3BucketEndpoint: false,
+     s3DisableBodySigning: true,
+     computeChecksums: true,
+     convertResponseTypes: true,
+     correctClockSkew: false,
+     customUserAgent: null,
+     dynamoDbCrc32: true,
+     systemClockOffset: 0,
+     signatureVersion: 's3',
+     signatureCache: true,
+     retryDelayOptions: {},
+     useAccelerateEndpoint: false },
+  isGlobalEndpoint: false,
+  endpoint: 
+   Endpoint {
+     protocol: 'https:',
+     host: 's3.amazonaws.com',
+     port: 443,
+     hostname: 's3.amazonaws.com',
+     pathname: '/',
+     path: '/',
+     href: 'https://s3.amazonaws.com/' },
+  _clientId: 50 }
+Bucket : finfort-integrationtest
+prefix :  datapull/FF00126352-test/
+bucketParams :  { Bucket: 'finfort-integrationtest',
+  Delimiter: '/',
+  Prefix: 'datapull/FF00126352-test/' }
+contentLength 1
+data { IsTruncated: false,
+  Marker: '',
+  Contents: 
+   [ { Key: 'datapull/FF00126352-test/',
+       LastModified: 2018-07-27T09:33:46.000Z,
+       ETag: '"d41d8cd98f00b204e9800998ecf8427e"',
+       Size: 0,
+       StorageClass: 'STANDARD',
+       Owner: [Object] } ],
+  Name: 'finfort-integrationtest',
+  Prefix: 'datapull/FF00126352-test/',
+  Delimiter: '/',
+  MaxKeys: 1000,
+  CommonPrefixes: [ { Prefix: 'datapull/FF00126352-test/1/' } ] }
+Folder is creted
+destinationfolderid : extract
+get file1 :  { Bucket: 'finfort-integrationtest',
+  Delimiter: '/',
+  Prefix: 'datapull/FF00126352-test/1/' }
+contentlengthgetfile1 1
+listobjects get file 2 : { Bucket: 'finfort-integrationtest',
+  Delimiter: '/',
+  Prefix: 'datapull/FF00126352-test/1/IncTax/' }
+get file 2 data; { IsTruncated: false,
+  Marker: '',
+  Contents: 
+   [ { Key: 'datapull/FF00126352-test/1/IncTax/',
+       LastModified: 2018-07-27T09:33:46.000Z,
+       ETag: '"d41d8cd98f00b204e9800998ecf8427e"',
+       Size: 0,
+       StorageClass: 'STANDARD',
+       Owner: [Object] } ],
+  Name: 'finfort-integrationtest',
+  Prefix: 'datapull/FF00126352-test/1/IncTax/',
+  Delimiter: '/',
+  MaxKeys: 1000,
+  CommonPrefixes: [ { Prefix: 'datapull/FF00126352-test/1/IncTax/001/' } ] }
+ctentonlength get file 2:  1
+DataPullSummary.json
+PANSearchResults.json
+Postback.json
+ProfileInfo.json
+datapull/FF00126352-test/1/IncTax/001/DataPullSummary.json
+DataPullSummary
+datapull/FF00126352-test/1/IncTax/001/PANSearchResults.json
+PANSearchResults
+datapull/FF00126352-test/1/IncTax/001/ProfileInfo.json
+ProfileInfo
+getFile4 :  { Bucket: 'finfort-integrationtest',
+  Delimiter: '/',
+  Prefix: 'datapull/FF00126352-test/1/IncTax/001/ReturnFiled/' }
+datavalue in get file 4 : { IsTruncated: false,
+  Marker: '',
+  Contents: 
+   [ { Key: 'datapull/FF00126352-test/1/IncTax/001/ReturnFiled/',
+       LastModified: 2018-07-27T09:33:46.000Z,
+       ETag: '"d41d8cd98f00b204e9800998ecf8427e"',
+       Size: 0,
+       StorageClass: 'STANDARD',
+       Owner: [Object] },
+     { Key: 'datapull/FF00126352-test/1/IncTax/001/ReturnFiled/ViewReturn_null.png',
+       LastModified: 2018-07-27T09:33:47.000Z,
+       ETag: '"9ad66e46e37aeb50f61788ea6910766f"',
+       Size: 114718,
+       StorageClass: 'STANDARD',
+       Owner: [Object] } ],
+  Name: 'finfort-integrationtest',
+  Prefix: 'datapull/FF00126352-test/1/IncTax/001/ReturnFiled/',
+  Delimiter: '/',
+  MaxKeys: 1000,
+  CommonPrefixes: 
+   [ { Prefix: 'datapull/FF00126352-test/1/IncTax/001/ReturnFiled/2016/' },
+     { Prefix: 'datapull/FF00126352-test/1/IncTax/001/ReturnFiled/2017/' } ] }
+2 ': get file 4 data'
+[ 'datapull',
+  'FF00126352-test',
+  '1',
+  'IncTax',
+  '001',
+  'ReturnFiled',
+  '2016',
+  '' ]
+[ 'datapull',
+  'FF00126352-test',
+  '1',
+  'IncTax',
+  '001',
+  'ReturnFiled',
+  '2017',
+  '' ]
+[ 'datapull',
+  'FF00126352-test',
+  '1',
+  'IncTax',
+  '001',
+  'ReturnFiled',
+  '2016',
+  '' ]
+2016
+get file 5 :  { Bucket: 'finfort-integrationtest',
+  Delimiter: '/',
+  Prefix: 'datapull/FF00126352-test/1/IncTax/001/ReturnFiled/2016/' }
+get file 5  { IsTruncated: false,
+  Marker: '',
+  Contents: 
+   [ { Key: 'datapull/FF00126352-test/1/IncTax/001/ReturnFiled/2016/',
+       LastModified: 2018-07-27T09:33:46.000Z,
+       ETag: '"d41d8cd98f00b204e9800998ecf8427e"',
+       Size: 0,
+       StorageClass: 'STANDARD',
+       Owner: [Object] } ],
+  Name: 'finfort-integrationtest',
+  Prefix: 'datapull/FF00126352-test/1/IncTax/001/ReturnFiled/2016/',
+  Delimiter: '/',
+  MaxKeys: 1000,
+  CommonPrefixes: [ { Prefix: 'datapull/FF00126352-test/1/IncTax/001/ReturnFiled/2016/Original/' } ] }
+get file 5  1
+name Original
+get file 6 : [ { Prefix: 'datapull/FF00126352-test/1/IncTax/001/ReturnFiled/2016/Original/ITR-1/' } ]
+get file 6  :  { IsTruncated: false,
+  Contents: 
+   [ { Key: 'datapull/FF00126352-test/1/IncTax/001/ReturnFiled/2016/Original/',
+       LastModified: 2018-07-27T09:33:46.000Z,
+       ETag: '"d41d8cd98f00b204e9800998ecf8427e"',
+       Size: 0,
+       StorageClass: 'STANDARD' } ],
+  Name: 'finfort-integrationtest',
+  Prefix: 'datapull/FF00126352-test/1/IncTax/001/ReturnFiled/2016/Original/',
+  Delimiter: '/',
+  MaxKeys: 1000,
+  CommonPrefixes: [ { Prefix: 'datapull/FF00126352-test/1/IncTax/001/ReturnFiled/2016/Original/ITR-1/' } ],
+  KeyCount: 2 }
+ITR name : ITR-1
+get file 6[object Object]
+get file 6 1
+get file 7 :  1
+get file 7  :  [ { Prefix: 'datapull/FF00126352-test/1/IncTax/001/ReturnFiled/2016/Original/ITR-1/20180216/' } ]
+{ Bucket: 'finfort-integrationtest',
+  Key: 'datapull/FF00126352-test/1/IncTax/001/ReturnFiled/2016/Original/ITR-1/20180216/398859720160218/2018-07-07-16-26-28-217_1182930502_.xml' }
+5
+[ 'datapull',
+  'FF00126352-test',
+  '1',
+  'IncTax',
+  '001',
+  'ReturnFiled',
+  '2016',
+  '' ]
+[ 'datapull',
+  'FF00126352-test',
+  '1',
+  'IncTax',
+  '001',
+  'ReturnFiled',
+  '2017',
+  '' ]
+2017
+get file 5 :  { Bucket: 'finfort-integrationtest',
+  Delimiter: '/',
+  Prefix: 'datapull/FF00126352-test/1/IncTax/001/ReturnFiled/2017/' }
+get file 5  { IsTruncated: false,
+  Marker: '',
+  Contents: 
+   [ { Key: 'datapull/FF00126352-test/1/IncTax/001/ReturnFiled/2017/',
+       LastModified: 2018-07-27T09:33:47.000Z,
+       ETag: '"d41d8cd98f00b204e9800998ecf8427e"',
+       Size: 0,
+       StorageClass: 'STANDARD',
+       Owner: [Object] } ],
+  Name: 'finfort-integrationtest',
+  Prefix: 'datapull/FF00126352-test/1/IncTax/001/ReturnFiled/2017/',
+  Delimiter: '/',
+  MaxKeys: 1000,
+  CommonPrefixes: [ { Prefix: 'datapull/FF00126352-test/1/IncTax/001/ReturnFiled/2017/Original/' } ] }
+get file 5  1
+name Original
+get file 6 : [ { Prefix: 'datapull/FF00126352-test/1/IncTax/001/ReturnFiled/2017/Original/ITR-1/' } ]
+get file 6  :  { IsTruncated: false,
+  Contents: 
+   [ { Key: 'datapull/FF00126352-test/1/IncTax/001/ReturnFiled/2017/Original/',
+       LastModified: 2018-07-27T09:33:47.000Z,
+       ETag: '"d41d8cd98f00b204e9800998ecf8427e"',
+       Size: 0,
+       StorageClass: 'STANDARD' } ],
+  Name: 'finfort-integrationtest',
+  Prefix: 'datapull/FF00126352-test/1/IncTax/001/ReturnFiled/2017/Original/',
+  Delimiter: '/',
+  MaxKeys: 1000,
+  CommonPrefixes: [ { Prefix: 'datapull/FF00126352-test/1/IncTax/001/ReturnFiled/2017/Original/ITR-1/' } ],
+  KeyCount: 2 }
+ITR name : ITR-1
+get file 6[object Object]
+get file 6 1
+get file 7 :  1
+get file 7  :  [ { Prefix: 'datapull/FF00126352-test/1/IncTax/001/ReturnFiled/2017/Original/ITR-1/20180216/' } ]
+{ Bucket: 'finfort-integrationtest',
+  Key: 'datapull/FF00126352-test/1/IncTax/001/ReturnFiled/2017/Original/ITR-1/20180216/398866340160218/2018-07-07-16-25-56-364_-620484159_.xml' }
+5
+[ 'datapull',
+  'FF00126352-test',
+  '1',
+  'IncTax',
+  '001',
+  'ReturnFiled',
+  '2016',
+  '' ]
+[ 'datapull',
+  'FF00126352-test',
+  '1',
+  'IncTax',
+  '001',
+  'ReturnFiled',
+  '2017',
+  '' ]
+success : true
+awsDownUpload/FF00126352-test/uploadedfiles
+callengine-2  27
+Engine Started , the order no is:  FF00126352-test
+[ '2015', '2016', '2017', '2018' ]
+[ '2015', '2016', '2017', '2018' ]
+2018..............107
+text Files are not Found
+2017..............107
+text Files are not Found
+2016..............107
+text Files are not Found
+2015..............107
+text Files are not Found
+2018..............133
+All items : [ '2016Original.xml',
+  '2017Original.xml',
+  'DataPullSummary.json',
+  'destID.txt',
+  'PANSearchResults.json',
+  'ProfileInfo.json' ]
+All items : [ '2016Original.xml',
+  '2017Original.xml',
+  'DataPullSummary.json',
+  'destID.txt',
+  'PANSearchResults.json',
+  'ProfileInfo.json' ]
+All items : [ '2016Original.xml',
+  '2017Original.xml',
+  'DataPullSummary.json',
+  'destID.txt',
+  'PANSearchResults.json',
+  'ProfileInfo.json' ]
+All items : [ '2016Original.xml',
+  '2017Original.xml',
+  'DataPullSummary.json',
+  'destID.txt',
+  'PANSearchResults.json',
+  'ProfileInfo.json' ]
+All items : [ '2016Original.xml',
+  '2017Original.xml',
+  'DataPullSummary.json',
+  'destID.txt',
+  'PANSearchResults.json',
+  'ProfileInfo.json' ]
+All items : [ '2016Original.xml',
+  '2017Original.xml',
+  'DataPullSummary.json',
+  'destID.txt',
+  'PANSearchResults.json',
+  'ProfileInfo.json' ]
+2017..............133
+All items : [ '2016Original.xml',
+  '2017Original.xml',
+  'DataPullSummary.json',
+  'destID.txt',
+  'PANSearchResults.json',
+  'ProfileInfo.json' ]
+All items : [ '2016Original.xml',
+  '2017Original.xml',
+  'DataPullSummary.json',
+  'destID.txt',
+  'PANSearchResults.json',
+  'ProfileInfo.json' ]
+./awsDownUpload//FF00126352-test//downloadedFiles/2017Original.xml
+original file size : 2017Original.xml 6559
+All items : [ '2016Original.xml',
+  '2017Original.xml',
+  'DataPullSummary.json',
+  'destID.txt',
+  'PANSearchResults.json',
+  'ProfileInfo.json' ]
+All items : [ '2016Original.xml',
+  '2017Original.xml',
+  'DataPullSummary.json',
+  'destID.txt',
+  'PANSearchResults.json',
+  'ProfileInfo.json' ]
+All items : [ '2016Original.xml',
+  '2017Original.xml',
+  'DataPullSummary.json',
+  'destID.txt',
+  'PANSearchResults.json',
+  'ProfileInfo.json' ]
+All items : [ '2016Original.xml',
+  '2017Original.xml',
+  'DataPullSummary.json',
+  'destID.txt',
+  'PANSearchResults.json',
+  'ProfileInfo.json' ]
+2017Original.xml undefined 1
+itreturn conversion started
+[ '2017' ] [ 'ITR-1' ]
+FF00126352-test 1 2017 16/02/2018 undefined undefined
+ITR Processed..........................
+FF00126352-test 8 2017 [ 'ExtraInfo_Orig_FF00126352-test_1_ITR-1_2017.json' ] undefined undefined
+FF00126352-test 100 2017 FF00126352-test_1_ITR-1_2017.csv ITR-1 undefined
+Original file found
+2017
+ITR-1
+BHARAT
+KHARE
+[ { FormName__c: 'ITR-1',
+    Year__c: '2017',
+    FirmName__c: 0,
+    ShareOfProfit__c: 0,
+    AmtShareOfProfit__c: 0,
+    ShareInCap__c: 0,
+    SalBonComm__c: 0,
+    Interest__c: 0,
+    NetInc__c: 0 } ]
+partner convertion completed
+[ { BankName__c: 'CENTRAL BANK OF INDIA',
+    IFSC_Code__c: 'CBIN0280234',
+    Account_Number__c: '3537580091\'',
+    AccountType__c: '',
+    Year__c: '2017' } ]
+bank convertion completed
+2017Original.xml undefined 2017 FF00126352-test 1
+original file found
+0
+Original found
+....................................37BS
+2017Original.xml undefined 2017 FF00126352-test 1
+Original found
+no data found
+2017Original.xml undefined 2017 FF00126352-test 1
+original file found
+ITR-1
+2017
+2017
+ITR-1
+partnerDir convertion completed
+In Profile Func
+./awsDownUpload/FF00126352-test/downloadedFiles/ProfileInfo
+true
+profile has started
+FF00126352-test 101 0 bdepk5961l21061980 undefined undefined
+resNameTypeError: Cannot read property 'nodeValue' of undefined
+6/132-33---null---BEHIND SHOE MARKET
+FF00126352-test 11 2017 FF00126352-test_1_ITP_2017.csv ITR-1 Original
+profile completed
+2016..............133
+All items : [ '2016Original.xml',
+  '2017Original.xml',
+  'DataPullSummary.json',
+  'destID.txt',
+  'PANSearchResults.json',
+  'ProfileInfo.json' ]
+./awsDownUpload//FF00126352-test//downloadedFiles/2016Original.xml
+original file size : 2016Original.xml 6596
+All items : [ '2016Original.xml',
+  '2017Original.xml',
+  'DataPullSummary.json',
+  'destID.txt',
+  'PANSearchResults.json',
+  'ProfileInfo.json' ]
+All items : [ '2016Original.xml',
+  '2017Original.xml',
+  'DataPullSummary.json',
+  'destID.txt',
+  'PANSearchResults.json',
+  'ProfileInfo.json' ]
+All items : [ '2016Original.xml',
+  '2017Original.xml',
+  'DataPullSummary.json',
+  'destID.txt',
+  'PANSearchResults.json',
+  'ProfileInfo.json' ]
+All items : [ '2016Original.xml',
+  '2017Original.xml',
+  'DataPullSummary.json',
+  'destID.txt',
+  'PANSearchResults.json',
+  'ProfileInfo.json' ]
+All items : [ '2016Original.xml',
+  '2017Original.xml',
+  'DataPullSummary.json',
+  'destID.txt',
+  'PANSearchResults.json',
+  'ProfileInfo.json' ]
+2016Original.xml undefined 1
+itreturn conversion started
+[ '2016' ] [ 'ITR-1' ]
+FF00126352-test 1 2016 16/02/2018 undefined undefined
+ITR Processed..........................
+FF00126352-test 8 2016 [ 'ExtraInfo_Orig_FF00126352-test_1_ITR-1_2016.json' ] undefined undefined
+FF00126352-test 100 2016 FF00126352-test_1_ITR-1_2016.csv ITR-1 undefined
+Original file found
+2016
+ITR-1
+BHARAT
+KHARE
+[ { FormName__c: 'ITR-1',
+    Year__c: '2016',
+    FirmName__c: 0,
+    ShareOfProfit__c: 0,
+    AmtShareOfProfit__c: 0,
+    ShareInCap__c: 0,
+    SalBonComm__c: 0,
+    Interest__c: 0,
+    NetInc__c: 0 } ]
+partner convertion completed
+[ { BankName__c: 'CENTRAL BANK OF INDIA',
+    IFSC_Code__c: 'CBIN0280234',
+    Account_Number__c: '3537580091\'',
+    AccountType__c: 'SAV',
+    Year__c: '2016' } ]
+bank convertion completed
+2016Original.xml undefined 2016 FF00126352-test 1
+original file found
+0
+Original found
+....................................37BS
+2016Original.xml undefined 2016 FF00126352-test 1
+Original found
+no data found
+2016Original.xml undefined 2016 FF00126352-test 1
+original file found
+ITR-1
+2016
+2015..............133
+All items : [ '2016Original.xml',
+  '2017Original.xml',
+  'DataPullSummary.json',
+  'destID.txt',
+  'PANSearchResults.json',
+  'ProfileInfo.json' ]
+All items : [ '2016Original.xml',
+  '2017Original.xml',
+  'DataPullSummary.json',
+  'destID.txt',
+  'PANSearchResults.json',
+  'ProfileInfo.json' ]
+All items : [ '2016Original.xml',
+  '2017Original.xml',
+  'DataPullSummary.json',
+  'destID.txt',
+  'PANSearchResults.json',
+  'ProfileInfo.json' ]
+All items : [ '2016Original.xml',
+  '2017Original.xml',
+  'DataPullSummary.json',
+  'destID.txt',
+  'PANSearchResults.json',
+  'ProfileInfo.json' ]
+All items : [ '2016Original.xml',
+  '2017Original.xml',
+  'DataPullSummary.json',
+  'destID.txt',
+  'PANSearchResults.json',
+  'ProfileInfo.json' ]
+All items : [ '2016Original.xml',
+  '2017Original.xml',
+  'DataPullSummary.json',
+  'destID.txt',
+  'PANSearchResults.json',
+  'ProfileInfo.json' ]
+FF00126352-test_BDAll_2016.csv,FF00126352-test_BDAll_2017.csv.....................................
+awsDownUpload/FF00126352-test/BankCsvFiles/FF00126352-test_BDAll_2016.csv...................................
+awsDownUpload/FF00126352-test/BankCsvFiles/FF00126352-test_BDAll_2017.csv...................................
+Error: ENOENT: no such file or directory, scandir 'D:\chottabheem\awsDownUpload\FF00126352-test\PLCsvFiles'no files
+Error: ENOENT: no such file or directory, scandir 'D:\chottabheem\awsDownUpload\FF00126352-test\BsCsvFiles'no files
+FFtext Parser.js started ./awsDownUpload/FF00126352-test/downloadedFiles/undefined2018
+{ Error: ENOENT: no such file or directory, open 'D:\chottabheem\awsDownUpload\FF00126352-test\downloadedFiles\undefined'
+    at Error (native)
+    at Object.fs.openSync (fs.js:641:18)
+    at Object.fs.readFileSync (fs.js:509:33)
+    at Object.TaxincParser (D:\chottabheem\taxInc.js:72:18)
+    at Object.TextPart (D:\chottabheem\26Asyear.js:71:11)
+    at Object.CallEngine (D:\chottabheem\FFEngine.js:248:15)
+    at Function.sync.fiber (D:\chottabheem\s3DownloadFunc.js:232:23)
+    at D:\chottabheem\node_modules\synchronize\sync.js:281:10
+  errno: -4058,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: 'D:\\chottabheem\\awsDownUpload\\FF00126352-test\\downloadedFiles\\undefined' }
+otd Error: ENOENT: no such file or directory, stat 'D:\chottabheem\awsDownUpload\FF00126352-test\downloadedFiles\OutstandingDemand.json'
+FF00126352-test 14 0 FailureJSONFileNotFound undefined undefined
+FF00126352-test 17 2015 0 undefined undefined
+FF00126352-test 17 2016 0 undefined undefined
+FF00126352-test 17 2017 0 undefined undefined
+FF00126352-test 17 2018 0 undefined undefined
+pan started
+FF00126352-test 25 0 FF00126352-test_1_panDet.csv undefined undefined
+./awsDownUpload/FF00126352-test/downloadedFiles/DINSearch_ListOfCompanies.json
+din Error: ENOENT: no such file or directory, stat 'D:\chottabheem\awsDownUpload\FF00126352-test\downloadedFiles\DINSearch_ListOfCompanies.json'
+./awsDownUpload/FF00126352-test/downloadedFiles/DINSearch_NameAndDOBResults.json
+all Engine operations done
+Line of 172 - uploadFunc - inside try 
+./awsDownUpload/FF00126352-test/downloadedFiles
+zero KB file
+zero KB file
+bankCSV conversion completed
+bankCSV conversion completed
+DestFolderID[ForThisOrder]: extract/FF00126352-test/IT/001
+Str Parallel Limit : 1
+Int Parallel Limit: 1
+gdrxworkwrapper Starting Work on item : ExtraInfo_Orig_FF00126352-test_1_ITR-1_2016.json
+Slkjlkjljj; ExtraInfo_Orig_FF00126352-test_1_ITR-1_2016.json
+Starting GDRxWorker -- This is : ExtraInfo_Orig_FF00126352-test_1_ITR-1_2016.json count : 0
+Dest Folder ID : extract/FF00126352-test/IT/001
+File Path : ./awsDownUpload/FF00126352-test/uploadedfiles/ExtraInfo_Orig_FF00126352-test_1_ITR-1_2016.json
+Ending GDRxWorker (success)-- This is : ExtraInfo_Orig_FF00126352-test_1_ITR-1_2016.json File count : 0
+File ID:  finfort-integrationtest/extract/FF00126352-test/IT/001
+File uploaded successfully  1
+Async function finished processing (success)
+gdrxworkwrapper Starting Work on item : ExtraInfo_Orig_FF00126352-test_1_ITR-1_2017.json
+Slkjlkjljj; ExtraInfo_Orig_FF00126352-test_1_ITR-1_2017.json
+Starting GDRxWorker -- This is : ExtraInfo_Orig_FF00126352-test_1_ITR-1_2017.json count : 1
+Dest Folder ID : extract/FF00126352-test/IT/001
+File Path : ./awsDownUpload/FF00126352-test/uploadedfiles/ExtraInfo_Orig_FF00126352-test_1_ITR-1_2017.json
+Ending GDRxWorker (success)-- This is : ExtraInfo_Orig_FF00126352-test_1_ITR-1_2017.json File count : 1
+File ID:  finfort-integrationtest/extract/FF00126352-test/IT/001
+File uploaded successfully  2
+Async function finished processing (success)
+gdrxworkwrapper Starting Work on item : FF00126352-testProcessingResult.json
+Slkjlkjljj; FF00126352-testProcessingResult.json
+Starting GDRxWorker -- This is : FF00126352-testProcessingResult.json count : 2
+Dest Folder ID : extract/FF00126352-test/IT/001
+File Path : ./awsDownUpload/FF00126352-test/uploadedfiles/FF00126352-testProcessingResult.json
+Ending GDRxWorker (success)-- This is : FF00126352-testProcessingResult.json File count : 2
+File ID:  finfort-integrationtest/extract/FF00126352-test/IT/001
+File uploaded successfully  3
+Async function finished processing (success)
+gdrxworkwrapper Starting Work on item : FF00126352-test_1_BankAll.csv
+Slkjlkjljj; FF00126352-test_1_BankAll.csv
+Starting GDRxWorker -- This is : FF00126352-test_1_BankAll.csv count : 3
+Dest Folder ID : extract/FF00126352-test/IT/001
+File Path : ./awsDownUpload/FF00126352-test/uploadedfiles/FF00126352-test_1_BankAll.csv
+Ending GDRxWorker (success)-- This is : FF00126352-test_1_BankAll.csv File count : 3
+File ID:  finfort-integrationtest/extract/FF00126352-test/IT/001
+File uploaded successfully  4
+Async function finished processing (success)
+gdrxworkwrapper Starting Work on item : FF00126352-test_1_DirDetPart_2017.csv
+Slkjlkjljj; FF00126352-test_1_DirDetPart_2017.csv
+Starting GDRxWorker -- This is : FF00126352-test_1_DirDetPart_2017.csv count : 4
+Dest Folder ID : extract/FF00126352-test/IT/001
+File Path : ./awsDownUpload/FF00126352-test/uploadedfiles/FF00126352-test_1_DirDetPart_2017.csv
+Ending GDRxWorker (success)-- This is : FF00126352-test_1_DirDetPart_2017.csv File count : 4
+File ID:  finfort-integrationtest/extract/FF00126352-test/IT/001
+File uploaded successfully  5
+Async function finished processing (success)
+gdrxworkwrapper Starting Work on item : FF00126352-test_1_ITP_2017.csv
+Slkjlkjljj; FF00126352-test_1_ITP_2017.csv
+Starting GDRxWorker -- This is : FF00126352-test_1_ITP_2017.csv count : 5
+Dest Folder ID : extract/FF00126352-test/IT/001
+File Path : ./awsDownUpload/FF00126352-test/uploadedfiles/FF00126352-test_1_ITP_2017.csv
+Ending GDRxWorker (success)-- This is : FF00126352-test_1_ITP_2017.csv File count : 5
+File ID:  finfort-integrationtest/extract/FF00126352-test/IT/001
+File uploaded successfully  6
+Async function finished processing (success)
+gdrxworkwrapper Starting Work on item : FF00126352-test_1_ITR-1_2016.csv
+Slkjlkjljj; FF00126352-test_1_ITR-1_2016.csv
+Starting GDRxWorker -- This is : FF00126352-test_1_ITR-1_2016.csv count : 6
+Dest Folder ID : extract/FF00126352-test/IT/001
+File Path : ./awsDownUpload/FF00126352-test/uploadedfiles/FF00126352-test_1_ITR-1_2016.csv
+Ending GDRxWorker (success)-- This is : FF00126352-test_1_ITR-1_2016.csv File count : 6
+File ID:  finfort-integrationtest/extract/FF00126352-test/IT/001
+File uploaded successfully  7
+Async function finished processing (success)
+gdrxworkwrapper Starting Work on item : FF00126352-test_1_ITR-1_2017.csv
+Slkjlkjljj; FF00126352-test_1_ITR-1_2017.csv
+Starting GDRxWorker -- This is : FF00126352-test_1_ITR-1_2017.csv count : 7
+Dest Folder ID : extract/FF00126352-test/IT/001
+File Path : ./awsDownUpload/FF00126352-test/uploadedfiles/FF00126352-test_1_ITR-1_2017.csv
+Ending GDRxWorker (success)-- This is : FF00126352-test_1_ITR-1_2017.csv File count : 7
+File ID:  finfort-integrationtest/extract/FF00126352-test/IT/001
+File uploaded successfully  8
+Async function finished processing (success)
+gdrxworkwrapper Starting Work on item : FF00126352-test_1_panDet.csv
+Slkjlkjljj; FF00126352-test_1_panDet.csv
+Starting GDRxWorker -- This is : FF00126352-test_1_panDet.csv count : 8
+Dest Folder ID : extract/FF00126352-test/IT/001
+File Path : ./awsDownUpload/FF00126352-test/uploadedfiles/FF00126352-test_1_panDet.csv
+Ending GDRxWorker (success)-- This is : FF00126352-test_1_panDet.csv File count : 8
+File ID:  finfort-integrationtest/extract/FF00126352-test/IT/001
+File uploaded successfully  9
+Async function finished processing (success)
+gdrxworkwrapper Starting Work on item : FF00126352-test_1_Partner_2016.csv
+Slkjlkjljj; FF00126352-test_1_Partner_2016.csv
+Starting GDRxWorker -- This is : FF00126352-test_1_Partner_2016.csv count : 9
+Dest Folder ID : extract/FF00126352-test/IT/001
+File Path : ./awsDownUpload/FF00126352-test/uploadedfiles/FF00126352-test_1_Partner_2016.csv
+Ending GDRxWorker (success)-- This is : FF00126352-test_1_Partner_2016.csv File count : 9
+File ID:  finfort-integrationtest/extract/FF00126352-test/IT/001
+File uploaded successfully  10
+Async function finished processing (success)
+gdrxworkwrapper Starting Work on item : FF00126352-test_1_Partner_2017.csv
+Slkjlkjljj; FF00126352-test_1_Partner_2017.csv
+Starting GDRxWorker -- This is : FF00126352-test_1_Partner_2017.csv count : 10
+Dest Folder ID : extract/FF00126352-test/IT/001
+File Path : ./awsDownUpload/FF00126352-test/uploadedfiles/FF00126352-test_1_Partner_2017.csv
+Ending GDRxWorker (success)-- This is : FF00126352-test_1_Partner_2017.csv File count : 10
+File ID:  finfort-integrationtest/extract/FF00126352-test/IT/001
+File uploaded successfully  11
+Async function finished processing (success)
+Inside gdfirstErrorOrFinalDone
+Async.Each -- All Items processed successfully
+File uploaded successfully  11
+process completed
+ glob before : 1
+glob Before sending ack GCH:[object Object]
+glob Before sending ack gorder:{"fields":{"consumerTag":"amq.ctag-3IFKJ0KG7mKWA5cP1UiI4Q","deliveryTag":2,"redelivered":false,"exchange":"","routingKey":"test15"},"properties":{"headers":{}},"content":{"type":"Buffer","data":[123,34,83,116,97,116,117,115,34,58,34,83,117,99,99,101,115,115,34,44,34,70,70,79,114,100,101,114,78,111,34,58,34,70,70,48,48,49,50,54,51,53,50,45,116,101,115,116,34,44,34,71,111,111,103,108,101,80,97,116,104,34,58,34,70,70,48,48,49,50,54,51,53,50,45,116,101,115,116,47,49,47,73,110,99,84,97,120,47,48,48,49,34,44,34,83,51,66,117,99,107,101,116,80,97,116,104,34,58,34,70,70,48,48,49,50,54,51,53,50,45,116,101,115,116,47,49,47,73,110,99,84,97,120,47,48,48,49,34,44,34,80,117,108,108,83,101,113,78,111,34,58,34,49,34,44,34,68,97,116,97,112,117,108,108,34,58,34,73,110,99,84,97,120,34,44,34,70,70,80,114,111,100,67,111,100,101,34,58,34,73,84,95,83,69,77,95,73,78,70,95,49,48,48,34,44,34,84,114,105,97,108,78,117,109,98,101,114,34,58,34,48,48,49,34,125]}}
+glob Aftersendingack :[object Object]
+ glob after : 5
+The order object has been sent
+The selected order is:  { _id: 5b5ae7732dddcd219c119411,
+  orderno: 'FF00126352-test',
+  pullno: '1',
+  pullname: 'IncTax',
+  status: 'Created',
+  remarks: 'Order has been created',
+  __v: 0,
+  created_at: 2018-07-27T09:35:47.349Z }
+FF00126352-test 102 0 LoginFailure undefined undefined
+ mail sent Sucessfully
+503 '<!DOCTYPE html>\n\t<html>\n\t  <head>\n\t\t<meta name="viewport" content="width=device-width, initial-scale=1">\n\t\t<meta charset="utf-8">\n\t\t<title>Offline for Maintenance</title>\n\t\t<style media="screen">\n\t\t  html,body,iframe {\n\t\t\tmargin: 0;\n\t\t\tpadding: 0;\n\t\t  }\n\t\t  html,body {\n\t\t\theight: 100%;\n\t\t\toverflow: hidden;\n\t\t  }\n\t\t  iframe {\n\t\t\twidth: 100%;\n\t\t\theight: 100%;\n\t\t\tborder: 0;\n\t\t  }\n\t\t</style>\n\t  </head>\n\t  <body>\n\t\t<iframe src="//www.herokucdn.com/error-pages/maintenance-mode.html"></iframe>\n\t  </body>\n\t</html>'
