@@ -85,7 +85,7 @@ module.exports = {
 						acctype[i] = bankAcctype[i].nodeValue;
 					}
                 }
-				else if(assyear == 2017){
+				else if(assyear == 2017 || assyear == 2018){
 					const bankAccNo = select('//ITRForm:BankAccountNo/text()', doc);
                     for (let i = 0; i < bankAccNo.length; i++) {
                         acc[i] = bankAccNo[i].nodeValue;

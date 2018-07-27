@@ -71,63 +71,7 @@
 	"ITProfile": [{
 		"ITProfileDownloadResult": "Success"
 	}],
-	"Form26AS": [{
-		"RowNum": "1",
-		"Year": "2019",
-		"26ASDownloadResult": "Success"
-	}, {
-		"RowNum": "2",
-		"Year": "2018",
-		"FileDownloadFormat1": "--Select--",
-		"FileDownloadFormat2": "HTML",
-		"FileDownloadFormat3": "Text",
-		"26ASDownloadResult": "Success"
-	}, {
-		"RowNum": "3",
-		"Year": "2017",
-		"FileDownloadFormat1": "--Select--",
-		"FileDownloadFormat2": "HTML",
-		"FileDownloadFormat3": "Text",
-		"26ASDownloadResult": "Success"
-	}, {
-		"RowNum": "4",
-		"Year": "2016",
-		"FileDownloadFormat1": "--Select--",
-		"FileDownloadFormat2": "HTML",
-		"FileDownloadFormat3": "Text",
-		"26ASDownloadResult": "Success"
-	}, {
-		"RowNum": "5",
-		"Year": "2015",
-		"FileDownloadFormat1": "--Select--",
-		"FileDownloadFormat2": "HTML",
-		"FileDownloadFormat3": "Text",
-		"26ASDownloadResult": "Success"
-	}, {
-		"RowNum": "6",
-		"Year": "2014",
-		"26ASDownloadResult": "Success"
-	}, {
-		"RowNum": "7",
-		"Year": "2013",
-		"26ASDownloadResult": "Success"
-	}, {
-		"RowNum": "8",
-		"Year": "2012",
-		"26ASDownloadResult": "Success"
-	}, {
-		"RowNum": "9",
-		"Year": "2011",
-		"26ASDownloadResult": "Success"
-	}, {
-		"RowNum": "10",
-		"Year": "2010",
-		"26ASDownloadResult": "Success"
-	}, {
-		"RowNum": "11",
-		"Year": "2009",
-		"26ASDownloadResult": "Success"
-	}],
+	
 	"OverallResult": "Success",
 	"Postback": [{
 		"FFOrderNo": "BP-23Jul-053",
