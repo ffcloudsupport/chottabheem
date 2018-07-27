@@ -73,7 +73,7 @@ module.exports = {
 										panNumber = 0;
 									}
 							}
-							else if((formname1 == 'ITR-2' || formname1 == 'ITR-3') && (assyear == 2017)){
+							else if((formname1 == 'ITR-2' || formname1 == 'ITR-3') && (assyear == 2017 || assyear == 2018)){
 									var firstName = checkFieldAvl('//ITRForm:FirstName/text()', 0);
 									var middleName = checkFieldAvl('//ITRForm:MiddleName/text()', 0);
 									var lastName = checkFieldAvl('//ITRForm:SurNameOrOrgName/text()', 0);
@@ -140,7 +140,7 @@ module.exports = {
 										panNumber = 0;
 									}
 							}
-							else if((formname1 == 'ITR-2' || formname1 == 'ITR-3') && (assyear == 2017)){
+							else if((formname1 == 'ITR-2' || formname1 == 'ITR-3') && (assyear == 2017 || assyear == 2018)){
 									var firstName = checkFieldAvl('//ITRForm:FirstName/text()', 0);
 									var middleName = checkFieldAvl('//ITRForm:MiddleName/text()', 0);
 									var lastName = checkFieldAvl('//ITRForm:SurNameOrOrgName/text()', 0);

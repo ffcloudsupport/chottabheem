@@ -1,0 +1,85 @@
+{
+	"ReturnData": [{
+		"RowNum": "1",
+		"PAN": "AEQPS9944F",
+		"A.Y.": "2018-19",
+		"ITR/Form": "ITR-3",
+		"Filing Date": "15/07/2018",
+		"Filing Type": "Revised",
+		"Ack. No.": "241232181121018",
+		"Status": "ITR Processed"
+	},{
+		"RowNum": "2",
+		"PAN": "AEQPS9944F",
+		"A.Y.": "2018-19",
+		"ITR/Form": "ITR-3",
+		"Filing Date": "12/07/2018",
+		"Filing Type": "Original",
+		"Ack. No.": "241232181121018",
+		"Status": "ITR Processed"
+	},{
+		"RowNum": "3",
+		"PAN": "AEQPS9944F",
+		"A.Y.": "2017-18",
+		"ITR/Form": "ITR-3",
+		"Filing Date": "27/03/2018",
+		"Filing Type": "Original",
+		"Ack. No.": "516995560270318",
+		"Status": "ITR Processed"
+	}, {
+		"RowNum": "4",
+		"PAN": "AEQPS9944F",
+		"A.Y.": "2016-17",
+		"ITR/Form": "ITR-4",
+		"Filing Date": "29/07/2016",
+		"Filing Type": "Original",
+		"Ack. No.": "344033150290716",
+		"Status": "Defective"
+	}, {
+		"RowNum": "5",
+		"PAN": "AEQPS9944F",
+		"A.Y.": "2015-16",
+		"ITR/Form": "ITR-4",
+		"Filing Date": "31/08/2015",
+		"Filing Type": "Original",
+		"Ack. No.": "753602390310815",
+		"Status": "ITR Processed"
+	}, {
+		"RowNum": "6",
+		"PAN": "AEQPS9944F",
+		"A.Y.": "2014-15",
+		"ITR/Form": "ITR-4",
+		"Filing Date": "05/08/2014",
+		"Filing Type": "Revised",
+		"Ack. No.": "318850720050814",
+		"Status": "ITR Processed"
+	}, {
+		"RowNum": "7",
+		"PAN": "AEQPS9944F",
+		"A.Y.": "2014-15",
+		"ITR/Form": "ITR-4",
+		"Filing Date": "31/07/2014",
+		"Filing Type": "Original",
+		"Ack. No.": "305719630310714",
+		"Status": "ITR-V received"
+	}],
+	"OutstandingTaxDemand": [{
+		"OutstandingTaxDemandDownloadResult": "NoDemandFound"
+	}],
+	"ITProfile": [{
+		"ITProfileDownloadResult": "Success"
+	}],
+	"OverallResult": "Success",
+	"Postback": [{
+		"FFOrderNo": "BP-21Jul-002",
+		"FFProdCode": "IT_SEM_INF_100",
+		"Datapull": "IncTax",
+		"PullSeqNo": "1",
+		"GooglePath": "BP-21Jul-002/1/IncTax/001",
+		"TrialNumber": "001",
+		"Status": "Success",
+		"BorrowerName": "null",
+		"BorrowerEmailID": "null",
+		"BorrowerMobile": "null"
+	}]
+}
