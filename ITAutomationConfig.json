@@ -20,15 +20,17 @@
     "2015",
 	"2016",
 	"2017",
-	"2018"
+  "2018",
+  "2019"
   ],
   "AS26YearsToExtract" : [
 	"2015",
 	"2016",
 	"2017",
-	"2018"
+  "2018" ,
+  "2019"
 	],
-  "Form26LatestYear"   : "2018",
+  "Form26LatestYear"   : "2019",
   "sfusername"         : "ffadmin@finfort.ind.in.fftest",
   "sfpassword"         : "Finforce2K4LLkqzkhLEey5uDOheReX84",
   "saddr" 			   : "https://ffpostit.herokuapp.com"
