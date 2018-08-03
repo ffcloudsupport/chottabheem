@@ -235,7 +235,7 @@ module.exports = {
 						}
 							//Added assesment year 2018 * Manoj 2ndAug 2018
                         // ITR-1 year 2013,2014,2015,2016,2017 && Commented mapping fields are not available for the particular file type
-                        if (formname[i] == 'ITR-1' && ( assyear == 2018 || assyear[i] == 2017 || assyear[i] == 2016 || assyear[i] == 2015 || assyear[i] == 2014 || assyear[i] == 2013)) {
+                        if (formname[i] == 'ITR-1' && ( assyear[i] == 2018 || assyear[i] == 2017 || assyear[i] == 2016 || assyear[i] == 2015 || assyear[i] == 2014 || assyear[i] == 2013)) {
                             salary[i] = checkFieldAvl('//ITRForm:IncomeFromSal/text()', 0);
 							houseproperty[i] = checkFieldAvl('//ITRForm:TotalIncomeOfHP/text()', 0);
                             //busPro[i] = checkFieldAvl('//ITRForm:TotProfBusGain/text()', 0);
@@ -244,7 +244,7 @@ module.exports = {
                             //cyloss[i] = checkFieldAvl('//ITRForm:CurrentYearLoss/text()', 0);
 							//broghtfwd[i] = checkFieldAvl('//ITRForm:BroughtFwdLossesSetoff/text()', 0);
 							//incTax[i] = checkFieldAvl('//ITRForm:IncChargeableTaxSplRates/text()', 0);
-							via[i] = checkFieldAvl('//ITRForm:TotalChapVIADeductions/text()', 0);
+							via[i] = checkFieldAvl('//ITRForm:ITR1_IncomeDeductions//ITRForm:DeductUndChapVIA//ITRForm:TotalChapVIADeductions/text()', 0);
                             //netAgri[i] = checkFieldAvl('//ITRForm:NetAgricultureIncomeOrOtherIncomeForRate/text()', 0);
 							taxAtNor[i] = checkFieldAvl('//ITRForm:TotalTaxPayable/text()', 0);
                             //taxAtSpl[i] = checkFieldAvl('//ITRForm:TaxAtSpecialRates/text()', 0);
@@ -262,7 +262,9 @@ module.exports = {
 							//proBfrTax[i] = checkFieldAvl('//ITRForm:PBT/text()', 0);
 							//deduc10A[i] = checkFieldAvl('//ITRForm:DeductionsUnder10Aor10AA/text()', 0);
 							tcs[i] = checkFieldAvl('//ITRForm:TCS/text()', 0);
-							ExIncome[i] = checkFieldAvl('//ITR1FORM:TaxExmpIntInc/text()', 0);
+							console.log('Exempt income coming here');
+							ExIncome[i] = checkFieldAvl('//ITR1FORM//ITR1FORM:TaxExmpIntInc/text()', 9990);
+							console.log('Exmept income:' , ExIncome[i]);
 							StatusItr[i] = checkFieldAvl('//ITRForm:Status/text()', 0);
 							if(assyear[i] == 2016 ||  assyear[i] == 2015 || assyear[i] == 2014 || assyear[i] == 2013){
 							   surcharge[i] = checkFieldAvl('//ITRForm:SurchargeOnAboveCrore/text()', 0);
@@ -432,7 +434,7 @@ module.exports = {
 							houseproperty[i] = checkFieldAvl('//ITRForm:IncomeFromHP/text()', 0);
 						    busPro[i] = checkFieldAvl('//ITRForm:TotProfBusGain/text()', 0);
 							capgains[i] = checkFieldAvl('//ITRForm:TotalCapGains/text()', 0);
-                            totIncOs[i] = checkFieldAvl('//ITRFor m:TotIncFromOS/text()', 0);
+                            totIncOs[i] = checkFieldAvl('//ITRForm:TotIncFromOS/text()', 0);
                             cyloss[i] = checkFieldAvl('//ITRForm:CurrentYearLoss/text()', 0);
 							broghtfwd[i] = checkFieldAvl('//ITRForm:BroughtFwdLossesSetoff/text()', 0);
                             //incTax[i] = checkFieldAvl('//ITRForm:IncChargeableTaxSplRates/text()', 0);
@@ -442,9 +444,6 @@ module.exports = {
                             taxAtSpl[i] = checkFieldAvl('//ITRForm:TaxAtSpecialRates/text()', 0);
                             rebateAgri[i] = checkFieldAvl('//ITRForm:RebateOnAgriInc/text()', 0);
                             rebate87A[i] = checkFieldAvl('//ITRForm:Rebate87A/text()', 0);
-							surcharge[i] = checkFieldAvl('//ITRForm:SurchargeOnAboveCrore/text()', 0);
-							// revenue[i] = checkFieldAvl('//ITRForm:TotRevenueFrmOperations/text()', 0);
-                            educ[i] = checkFieldAvl('//ITRForm:EducationCess/text()', 0);
                             sec89[i] = checkFieldAvl('//ITRForm:Section89/text()', 0);
                             sec90[i] = checkFieldAvl('//ITRForm:Section90/text()', 0);
                             sec91[i] = checkFieldAvl('//ITRForm:Section91/text()', 0);
@@ -462,6 +461,9 @@ module.exports = {
 							//revenue[i] = 'NA';
 
 							if(assyear[i] == 2016 ||  assyear[i] == 2015 || assyear[i] == 2014){
+								surcharge[i] = checkFieldAvl('//ITRForm:SurchargeOnAboveCrore/text()', 0);
+                            educ[i] = checkFieldAvl('//ITRForm:EducationCess/text()', 0);
+
 								incTax[i] = checkFieldAvl('//ITRForm:IncChargeableTaxSplRates/text()', 0);
 								via[i] = checkFieldAvl('//ITRForm:TotalChapVIADeductions/text()', 1);
 								// Extracting overAllSection44AB
@@ -499,28 +501,41 @@ module.exports = {
 												sec92E[i] = 'N';
 											}
 							}
-							else if(assyear[i] == 2017){
-
+							else if(assyear[i] == 2017 || assyear[i] == 2018){
+									console.log('it inside 2018 loop');
 								incTax[i] = checkFieldAvl('//ITRForm:IncChargeTaxSplRate111A112/text()', 0);
 								via[i] = checkFieldAvl('//ITRForm:TotDeductUndSchVIA/text()', 0);
 								//overAllSection44AB[i] = checkFieldAvl('//ITRForm:LiableSec44ABflg/text()', 0);
 								//sec92E[i] = checkFieldAvl('//ITRForm:Sec92EFirmFlag/text()', 0);
-								revenue[i] = checkFieldAvl('//ITRForm:TotRevenueFrmOperations/text()', 0);
+								var totalotherincome = checkFieldAvl('//ITRForm:CreditsToPL//ITRForm:OthIncome//ITRForm:TotOthIncome/text()' , 0);
+								var revenuefromoperation = checkFieldAvl('//ITRForm:CreditsToPL//ITRForm:TotRevenueFrmOperations/text()' , 0);
+								var gross = checkFieldAvl('//ITRForm:NoBooksOfAccPL//ITRForm:GrossReceipt/text()' , 0)
+								console.log('totalotherincome & revenuefromoperation & gross ' , totalotherincome , revenuefromoperation , gross);
+								var rev = parseFloat(totalotherincome) + parseFloat(revenuefromoperation)+parseFloat(gross);
+								revenue[i] = rev ;
 								depreAmrt[i] = checkFieldAvl('//ITRForm:DepreciationAmort/text()', 0);
 								interest[i] = checkFieldAvl('//ITRForm:InterestExpdr/text()', 0);
+								surcharge[i] =  checkFieldAvl('//ITRForm:ComputationOfTaxLiability//ITRForm:TaxPayableOnTI//ITRForm:SurchargeOnAboveCrore/text()' , 0);
+								educ[i] =  checkFieldAvl('//ITRForm:ComputationOfTaxLiability//ITRForm:TaxPayableOnTI//ITRForm:EducationCess/text()' , 0);
+								console.log('edu & subcharge :' , surcharge[i] , educ[i]);
 								// New changes for profit before tax (17-7-2017)
 								    var net = checkFieldAvl('//ITRForm:NetProfit/text()', 0);
 									var pbidtaDet = checkFieldAvl('//ITRForm:PBIDTA/text()', 0);
+									
 									proBfIncTax[i] = parseFloat(pbidtaDet) + parseFloat(net);
 								// Extracting Revenue from PBT or NetProfit
 									//var pbt = checkFieldAvl('//ITRForm:PBT/text()',0);
 									proBfrTax[i] = proBfIncTax[i] - (parseFloat(depreAmrt[i]) + parseFloat(interest[i]));
-
+									
 								//proBfrTax[i] = checkFieldAvl('//ITRForm:PBT/text()', 0);
 								deduc10A[i] = checkFieldAvl('//ITRForm:DeductionsUnder10Aor10AA/text()', 0);
 								var amt1 =0;
+
 							parser.parseString(data, function (err, result) {
+								console.log('inswide result');
+							
 									var test =[];
+	
 									try{
 										var amtTagCount = result['ITRETURN:ITR']['ITR3FORM:ITR3'][0]['ITRForm:ScheduleAL'][0]['ITRForm:ImmovableDetails'];
 										//console.log(amtTagCount.length);

@@ -52,7 +52,7 @@ module.exports = {
 	FFAS26TextParser(FFfilename, FFyear, FForderNo, FFpullSeqNo,callback) {
 		console.log('FFtext Parser.js started '+FFyear);
 		//Order to be processed only for the following year
-		if (FFyear == 2014 || FFyear == 2015 || FFyear == 2016 || FFyear == 2017 || FFyear == 2018) {
+		if (FFyear == 2014 || FFyear == 2015 || FFyear == 2016 || FFyear == 2017 || FFyear == 2018 || FFyear == 2019) {
 
 		// Fetching Year from Config.json file
 			let jsonData = '';
