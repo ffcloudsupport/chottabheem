@@ -114,9 +114,12 @@ module.exports = {
 					console.log('itreturn conversion started');
                     const doc = new dom().parseFromString(data.toString());
                     const select = xpath.useNamespaces({ 'ITRForm': 'http://incometaxindiaefiling.gov.in/master' , 'ITR4FORM': 'http://incometaxindiaefiling.gov.in/ITR4'});
-
+							const assyear1 = []
 		// Common Fields for All the ITR Forms
 					assyear[i] = checkFieldAvl('//ITRForm:AssessmentYear/text()',0)
+					console.log('Assesmentyear :' , assyear[i]);
+					 assyear1[i] = checkFieldAvl('//AssessmentYear/text()' ,0)
+					console.log('Assesmentyear1:' , assyear1[i])
                     formname[i] = checkFieldAvl('//ITRForm:FormName/text()', 0);
 					int234A[i] = checkFieldAvl('//ITRForm:IntrstPayUs234A/text()', 0);
                     int234B[i] = checkFieldAvl('//ITRForm:IntrstPayUs234B/text()', 0);
@@ -230,9 +233,9 @@ module.exports = {
 										//processing.updateProceFile(orderNo,25,year,'Failure');
 										}
 						}
-
+							//Added assesment year 2018 * Manoj 2ndAug 2018
                         // ITR-1 year 2013,2014,2015,2016,2017 && Commented mapping fields are not available for the particular file type
-                        if (formname[i] == 'ITR-1' && (assyear[i] == 2017 || assyear[i] == 2016 || assyear[i] == 2015 || assyear[i] == 2014 || assyear[i] == 2013)) {
+                        if (formname[i] == 'ITR-1' && ( assyear == 2018 || assyear[i] == 2017 || assyear[i] == 2016 || assyear[i] == 2015 || assyear[i] == 2014 || assyear[i] == 2013)) {
                             salary[i] = checkFieldAvl('//ITRForm:IncomeFromSal/text()', 0);
 							houseproperty[i] = checkFieldAvl('//ITRForm:TotalIncomeOfHP/text()', 0);
                             //busPro[i] = checkFieldAvl('//ITRForm:TotProfBusGain/text()', 0);
@@ -267,9 +270,9 @@ module.exports = {
 
                         }
 
-
+								//2nd Aug 2018 -- Manoj --- Added 2018 year
 						// ITR-2   year 2013,2014,2015,2016,2017 && Commented mapping fields are not available for the particular file type
-						else if (formname[i] == 'ITR-2' && (assyear[i] == 2017 || assyear[i] == 2016 || assyear[i] == 2015 || assyear[i] == 2014 || assyear[i] == 2013)) {
+						else if (formname[i] == 'ITR-2' && (assyear[i] == 2018 ||assyear[i] == 2017 || assyear[i] == 2016 || assyear[i] == 2015 || assyear[i] == 2014 || assyear[i] == 2013)) {
 							salary[i] = checkFieldAvl('//ITRForm:Salaries/text()', 0);
 							houseproperty[i] = checkFieldAvl('//ITRForm:IncomeFromHP/text()', 0);
                             //busPro[i] = checkFieldAvl('//ITRForm:TotProfBusGain/text()', 0);
@@ -375,7 +378,7 @@ module.exports = {
 							}
 
                         }
-
+								//A dded year 2018  ---Manoj --- 2nd Aug 2018
                         // ITR-2A  year 2016,2015 && Commented mapping fields are not available for the particular file type
                         else if ( formname[i] == 'ITR-2A' && (assyear[i] == 2016 || assyear[i] == 2015 )) {
 							salary[i] = checkFieldAvl('//ITRForm:Salaries/text()', 0);
@@ -423,12 +426,13 @@ module.exports = {
 
 
 						// ITR-3  year 2013,2014,2015,2016,2017 && Commented mapping fields are not available for the particular file type
-						else if(formname[i] == 'ITR-3' && (assyear[i] == 2017 || assyear[i] == 2016 ||  assyear[i] == 2015 || assyear[i] == 2014 || assyear[i] == 2013 )) {
+						else if(formname[i] == 'ITR-3' && ( assyear[i] == 2018 ||assyear[i] == 2017 || assyear[i] == 2016 ||  assyear[i] == 2015 || assyear[i] == 2014 || assyear[i] == 2013 )) {
 							salary[i] = checkFieldAvl('//ITRForm:Salaries/text()', 0);
+							console.log('salary:' , salary[i] , assyear);
 							houseproperty[i] = checkFieldAvl('//ITRForm:IncomeFromHP/text()', 0);
 						    busPro[i] = checkFieldAvl('//ITRForm:TotProfBusGain/text()', 0);
 							capgains[i] = checkFieldAvl('//ITRForm:TotalCapGains/text()', 0);
-                            totIncOs[i] = checkFieldAvl('//ITRForm:TotIncFromOS/text()', 0);
+                            totIncOs[i] = checkFieldAvl('//ITRFor m:TotIncFromOS/text()', 0);
                             cyloss[i] = checkFieldAvl('//ITRForm:CurrentYearLoss/text()', 0);
 							broghtfwd[i] = checkFieldAvl('//ITRForm:BroughtFwdLossesSetoff/text()', 0);
                             //incTax[i] = checkFieldAvl('//ITRForm:IncChargeableTaxSplRates/text()', 0);
@@ -664,8 +668,10 @@ module.exports = {
 							  }
 
 						}
+						//Added year 2018 ---MANOJ ---2nd Aug 2018
 						// ITR-4  year 2013,2014,2015,2016,2017  && Commented mapping fields are not available for the particular file type
-						else if (formname[i] == 'ITR-4' && (assyear[i] == 2017 || assyear[i] == 2016 ||  assyear[i] == 2015 || assyear[i] == 2014 || assyear[i] == 2013 )) {
+						else if (formname[i] == 'ITR-4' && ( assyear[i] == 2018 || assyear[i] == 2017 || assyear[i] == 2016 ||  assyear[i] == 2015 || assyear[i] == 2014 || assyear[i] == 2013 )) {
+							console.log('inside ITR-4 loop');
 							//salary[i] = checkFieldAvl('//ITRForm:Salaries/text()', 0);
                             //houseproperty[i] = checkFieldAvl('//ITRForm:IncomeFromHP/text()', 0);
 							//busPro[i] = checkFieldAvl('//ITRForm:TotProfBusGain/text()', 0);
@@ -898,6 +904,137 @@ module.exports = {
 
 								var Asset2 = parseFloat(amt2) + parseFloat(depInBank2)+parseFloat(sharenSec2)+parseFloat(insPolicy2)+parseFloat(lnandAdv2)+parseFloat(cashinHand2)+parseFloat(jewlBul2)+parseFloat(arcDraw2)+parseFloat(vehBoat2)+parseFloat(assInv2);
 							    Assets[i] = Asset2;
+							    console.log(Asset2 + '....................................767');
+							}
+
+							else if(assyear[i] == 2018){
+								console.log('Inside ITR4 18 loop');
+								salary[i] = checkFieldAvl('//ITRForm:IncomeFromSal/text()', 0);
+								console.log('2018 salary ' , salary[i]);
+								houseproperty[i] = checkFieldAvl('//ITRForm:TotalIncomeOfHP/text()', 0);
+								busPro[i] = checkFieldAvl('//ITRForm:IncomeFromBusinessProf/text()', 0);
+								totIncOs[i] = checkFieldAvl('//ITRForm:IncomeOthSrc/text()', 0);
+								taxAtNor[i] = checkFieldAvl('//ITRForm:TotalTaxPayable/text()', 0);
+								educ[i] = checkFieldAvl('//ITRForm:EducationCess/text()', 0);
+							    ExIncome[i] = checkFieldAvl('//ITR4FORM:TaxExmpIntInc/text()', 0);
+								var amt2 =0;
+								var cashinHand3 =0;
+
+								//console.log( 'starting of XMl' ,result['ns3:ITR']);
+							parser.parseString(data, function (err, result) {
+									var test =[];
+									try{
+										var amtTagCount = result['ns3:ITR']['ns2:ITR4'][0]['ScheduleAL'][0]['ImmovableDetails'];
+											console.log('amtagcount :' , amtTagCount);	
+									}
+										catch(e){
+
+										}
+									var amtAll =[];
+								try{
+									for(let i=0;i<amtTagCount.length;i++){
+										try{
+										amtAll[i] = result['ns3:ITR']['ns2:ITR4'][0]['ScheduleAL'][0]['ImmovableDetails'][i]['Amount'];
+										amt2 += parseFloat(amtAll[i]);
+										console.log('Amo:' , amt2);
+										let cashinHand2;
+										cashinHand2 = result['ns3:ITR']['ns2:ITR4'][0]['ScheduleAL'][0]['MovableAsset'][i]['CashInHand'];
+										 cashinHand3 += parseFloat(cashinHand2)
+										console.log('cash in hand :' , cashinHand3);
+
+
+										}
+										catch(e){
+
+										}
+									}
+								}
+								catch(e){
+									console.log('there is  no AMount');
+
+									parser.parseString(data, function (err, result) {
+										var test =[];
+										try{
+											var amtTagCount = result['ITRETURN:ITR']['ITR4FORM:ITR4'][0]['ITRForm:ScheduleAL'][0]['ITRForm:ImmovableDetails'];
+											}
+											catch(e){
+	
+											}
+										var amtAll =[];
+									try{
+										for(let i=0;i<amtTagCount.length;i++){
+											try{
+											amtAll[i] = result['ITRETURN:ITR']['ITR4FORM:ITR4'][0]['ITRForm:ScheduleAL'][0]['ITRForm:ImmovableDetails'][i]['ITRForm:Amount'];
+											amt2 += parseFloat(amtAll[i]);
+											console.log('Amo old:' , amt2);
+											let cashinHand2;
+											cashinHand2 = result['ITRETURN:ITR']['ITR4FORM:ITR4'][0]['ScheduleAL'][0]['MovableAsset'][i]['CashInHand'];
+											 cashinHand3 += parseFloat(cashinHand2)
+											console.log('cash in hand old:' , cashinHand3);
+	
+	
+											}
+											catch(e){
+	
+											}
+										}
+									}
+									catch(e){
+										console.log('there is  no AMount');
+									}
+								});
+
+								}
+							});
+
+								let depInBank2;
+								   depInBank2 = checkFieldAvl('//ITRForm:DepositsInBank/text()', 0);
+								   console.log('depositInBank2 :' , depInBank2);
+								let sharenSec2;
+								   sharenSec2 = checkFieldAvl('//ITRForm:SharesAndSecurities/text()', 0);
+								   console.log('sharenSce2 :' , sharenSec2);
+								let insPolicy2;
+								   insPolicy2 = checkFieldAvl('//ITRForm:InsurancePolicies/text()', 0);
+								let lnandAdv2;
+								   lnandAdv2 = checkFieldAvl('//ITRForm:LoansAndAdvancesGiven/text()', 0);
+								/*
+								   let cashinHand2;
+								   cashinHand2 = result['ns3:ITR']['ns2:ITR4'][0]['ScheduleAL'][0]['MovableAsset'][i]['CashInHand'];
+									console.log('cash in hand :' , cashinHand2);
+									*/
+
+								   let jewlBul2;
+								   jewlBul2 = checkFieldAvl('//ITRForm:JewelleryBullionEtc/text()', 0);
+									console.log('jewlBul2 : ' , jewlBul2);
+								   let arcDraw2;
+								   arcDraw2 = checkFieldAvl('//ITRForm:ArchCollDrawPaintSulpArt/text()', 0);
+									console.log('arc :' , arcDraw2);
+								   let vehBoat2;
+								   vehBoat2 = checkFieldAvl('//ITRForm:VehiclYachtsBoatsAircrafts/text()', 0);
+								   console.log('Vehucle :' , vehBoat2);
+										console.log('AssesmentInve :' , assInv2 , cashinHand3);
+										console.log('Ass :' , assInv2  , cashinHand3);
+								try{
+									var assInvAll = select('//ITRForm:AssesseInvestment/text()', doc);
+									const assInvestment = [];
+									var assInv2 =0;
+									for (let i = 0; i < assInvAll.length; i++) {
+										assInvestment[i] = assInvAll[i].nodeValue;
+										assInv2 += parseFloat(assInvestment[i]);
+										 console.log('Assesment Inv:' ,assInv2);
+
+									}
+									console.log(assInv2+'................................498');
+								}
+								catch(e){
+									console.log('AssesseInvestment not found  '+'................................474');
+								}
+										console.log('AssesmentInve :' , assInv2 , cashinHand3);
+										var Asset2 =0  ;
+										console.log(Asset2 , 'Line 990 , Asseset2' );
+								var Asset2 = parseFloat(amt2) + parseFloat(depInBank2)+parseFloat(sharenSec2)+parseFloat(insPolicy2)+parseFloat(lnandAdv2)+parseFloat(cashinHand3)+parseFloat(jewlBul2)+parseFloat(arcDraw2)+parseFloat(vehBoat2)+parseFloat(assInv2);
+								   console.log(Asset2 , 'cash:' ,cashinHand3);
+								Assets[i] = Asset2;
 							    console.log(Asset2 + '....................................767');
 							}
 

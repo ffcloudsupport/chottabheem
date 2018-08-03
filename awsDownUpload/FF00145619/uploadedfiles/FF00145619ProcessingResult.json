@@ -1,0 +1,195 @@
+{
+  "2015": {
+    "ITReturnProcessingOptions": [
+      "FailureMissingFolder",
+      "FailureXMLFileNotFound",
+      "FailureXMLFileReadError",
+      "FailureImproperXML",
+      "FailureMultipleXMLFiles",
+      "FailureOthers",
+      "Success"
+    ],
+    "ITReturnProcessingResult": "",
+    "ITReturnCSVFileName": "",
+    "OriginalITRFormName": "",
+    "OriginalITRFilingDate": "",
+    "RevisionCount": 0,
+    "LastRevisionITRFormName": "",
+    "LastRevisionITRFilingDate": "",
+    "PDFFileProcessingOptions": [
+      "FailurePDFFileNotFound",
+      "FailureRenamingError",
+      "FailureOthers",
+      "Success"
+    ],
+    "PDFFileProcessingResult": "",
+    "ExtraInfo": []
+  },
+  "2016": {
+    "ITReturnProcessingOptions": [
+      "FailureMissingFolder",
+      "FailureXMLFileNotFound",
+      "FailureXMLFileReadError",
+      "FailureImproperXML",
+      "FailureMultipleXMLFiles",
+      "FailureOthers",
+      "Success"
+    ],
+    "ITReturnProcessingResult": "FailureXMLFileNotFound",
+    "ITReturnCSVFileName": "",
+    "OriginalITRFormName": "",
+    "OriginalITRFilingDate": "",
+    "RevisionCount": 0,
+    "LastRevisionITRFormName": "",
+    "LastRevisionITRFilingDate": "",
+    "PDFFileProcessingOptions": [
+      "FailurePDFFileNotFound",
+      "FailureRenamingError",
+      "FailureOthers",
+      "Success"
+    ],
+    "PDFFileProcessingResult": "",
+    "ExtraInfo": []
+  },
+  "2017": {
+    "ITReturnProcessingOptions": [
+      "FailureMissingFolder",
+      "FailureXMLFileNotFound",
+      "FailureXMLFileReadError",
+      "FailureImproperXML",
+      "FailureMultipleXMLFiles",
+      "FailureOthers",
+      "Success"
+    ],
+    "ITReturnProcessingResult": "",
+    "ITReturnCSVFileName": "",
+    "OriginalITRFormName": "",
+    "OriginalITRFilingDate": "",
+    "RevisionCount": 0,
+    "LastRevisionITRFormName": "",
+    "LastRevisionITRFilingDate": "",
+    "PDFFileProcessingOptions": [
+      "FailurePDFFileNotFound",
+      "FailureRenamingError",
+      "FailureOthers",
+      "Success"
+    ],
+    "PDFFileProcessingResult": "",
+    "ExtraInfo": []
+  },
+  "2018": {
+    "ITReturnProcessingOptions": [
+      "FailureMissingFolder",
+      "FailureXMLFileNotFound",
+      "FailureXMLFileReadError",
+      "FailureImproperXML",
+      "FailureMultipleXMLFiles",
+      "FailureOthers",
+      "Success"
+    ],
+    "ITReturnProcessingResult": "Success",
+    "ITReturnCSVFileName": "FF00145619_1_ITR-3_2018.csv",
+    "OriginalITRFormName": "ITR-3",
+    "OriginalITRFilingDate": "25/05/2018",
+    "RevisionCount": 0,
+    "LastRevisionITRFormName": "",
+    "LastRevisionITRFilingDate": "",
+    "PDFFileProcessingOptions": [
+      "FailurePDFFileNotFound",
+      "FailureRenamingError",
+      "FailureOthers",
+      "Success"
+    ],
+    "PDFFileProcessingResult": "",
+    "ExtraInfo": [
+      "ExtraInfo_Orig_FF00145619_1_ITR-3_2018.json"
+    ]
+  },
+  "Postback": {
+    "FFOrderNo": "FF00145619",
+    "FFProdCode": "IT_SEM_INF_100",
+    "PullSeqNo": "1",
+    "Datapull": "IncTax",
+    "TrialNumber": "001",
+    "Status": "Success",
+    "GooglePath": "FF00145619/1/IncTax/001",
+    "BorrowerName": "undefined",
+    "BorrowerEmailID": "undefined",
+    "BorrowerMobile": "undefined"
+  },
+  "ITAutomationInfo": {
+    "ProcessingResultJsonFileversion": "2.0",
+    "CONFIG_YEARS": [
+      2015,
+      2016,
+      2017,
+      2018
+    ],
+    "DestinationPath": "/FF00145619/IT/001/"
+  },
+  "BankDetails": {
+    "BankDetailsProcessingOptions": [
+      "FailureXMLFileNotFound",
+      "FailureXMLFileReadError",
+      "FailureImproperXML",
+      "FailureMultipleXMLFiles",
+      "FailureOthers",
+      "Success"
+    ],
+    "BankDetailsProcessingResult": "",
+    "LatestYear": "",
+    "FormType": "",
+    "FileType": "",
+    "CSVFileName": ""
+  },
+  "ITprofile": {
+    "ITProfileProcessingOptions": [
+      "FailureJSONFileNotFound",
+      "FailureJSONFileReadError",
+      "FailureImproperJSON",
+      "FailureMultipleJSONFiles",
+      "FailureOthers",
+      "Success",
+      "FailureLastITReturnXMLFileMissing"
+    ],
+    "ITprofileProcessingResult": "Success",
+    "LatestYear": "2018",
+    "FormType": "ITR-3",
+    "FileType": "Original",
+    "ITRPassword": "dmbpk0573g01011963",
+    "CSVFileName": "FF00145619_1_ITP_2018.csv"
+  },
+  "OutstandingTaxDemand": {
+    "OutstandingTaxDemandProcessingOptions": [
+      "FailureJSONFileNotFound",
+      "FailureJSONFileReadError",
+      "FailureImproperJSON",
+      "FailureMultipleJSONFiles",
+      "FailureOthers",
+      "Success"
+    ],
+    "OutstandingTaxDemandProcessingResult": "FailureJSONFileNotFound",
+    "CSVFileName": ""
+  },
+  "PanDetails": {
+    "PanDetailsProcessingOptions": [
+      "FailureJSONFileNotFound",
+      "FailureJSONFileReadError",
+      "FailureImproperJSON",
+      "FailureMultipleJSONFiles",
+      "FailureOthers",
+      "Success"
+    ],
+    "PanDetailsProcessingResult": "Success",
+    "CSVFileName": "FF00145619_1_panDet.csv"
+  },
+  "DownloadCompletionTimestamp": {
+    "DownloadCompletionTimestampUpdationOptions": [
+      "Success",
+      "LoginFailure",
+      "UpdationFailure",
+      "UnknownFailure"
+    ],
+    "DownloadCompletionTimeStampUpdationStatus": "LoginFailure"
+  }
+}
