@@ -89,7 +89,7 @@ module.exports = {
                 ASyears = jsonData.ASyears;
                 TextASYears = jsonData.AS26YearsToExtract;
                 console.log(TextASYears)
-                console.log(years)
+             //        console.log(years)
                 const fstyearorg = [];
                 const fstyearrev = [];
                 const textFiles = [];
@@ -141,13 +141,13 @@ module.exports = {
         const year = years[length - 1];
         console.log(year + '..............133');
         for (let i = 0; i < items.length; i++) {
-            console.log('All items :' , items);
+          //  console.log('All items :' , items);
           const startname = items[i].substring(0, 4);
           const middlename = items[i].substring(4, 8);
         	if (path.extname(items[i]) == '.xml' && startname == year) {
         		if (middlename == 'Orig') {
                     var filepath = path1 + '/' + orderNo + '/' + path2 + '/' + items[i] 
-                    console.log(filepath);
+                 //   console.log(filepath);
                     var statsori = fs.statSync(filepath)
                     console.log('original file size :', items[i],statsori.size); 
                     var filesize = statsori.size ; 

@@ -58,7 +58,7 @@ module.exports = {
 
         const actualfilingdt = [0, '01/01/2099'];
         const advaTax = [0, 0];
-        const broghtfwd = [0, 0];
+        const broghtfwd = [0, 0];	
         const busPro = [0, 0];
         const capgains = [0, 0];
         const cyloss = [0, 0];
@@ -305,7 +305,7 @@ module.exports = {
 							StatusItr[i] = checkFieldAvl('//ITRForm:Status/text()', 0);
                             Liability[i] = checkFieldAvl('//ITRForm:LiabilityInRelatAssets/text()', 0);
 
-							if(assyear[i] == 2017){
+							if(assyear[i] == 2017 || assyear[i] == 2018){
 							   busPro[i] = checkFieldAvl('//ITRForm:TotProfBusGain/text()', 0);
 							   sec92E[i] = checkFieldAvl('//ITRForm:Sec92EFirmFlag/text()', 0);
 							   incTax[i] = checkFieldAvl('//ITRForm:IncChargeTaxSplRate111A112/text()', 0);
@@ -346,7 +346,8 @@ module.exports = {
 								let lnandAdv;
 								   lnandAdv = checkFieldAvl('//ITRForm:LoansAndAdvancesGiven/text()', 0);
 								let cashinHand;
-								   cashinHand = checkFieldAvl('//ITRForm:CashInHand/text()', 0);
+								//Aug 06th 2018 cash in Hand Added PARENT Tag ---Manoj
+								   cashinHand = checkFieldAvl('//ITRForm:ScheduleAL//ITRForm:MovableAsset//ITRForm:CashInHand/text()', 0);
 								let jewlBul;
 								   jewlBul = checkFieldAvl('//ITRForm:JewelleryBullionEtc/text()', 0);
 								let arcDraw;
@@ -462,7 +463,17 @@ module.exports = {
 
 							if(assyear[i] == 2016 ||  assyear[i] == 2015 || assyear[i] == 2014){
 								surcharge[i] = checkFieldAvl('//ITRForm:SurchargeOnAboveCrore/text()', 0);
-                            educ[i] = checkFieldAvl('//ITRForm:EducationCess/text()', 0);
+							educ[i] = checkFieldAvl('//ITRForm:EducationCess/text()', 0);
+							
+							//Manoj 06th Aug Revenue is added
+
+							var totalrevenue = checkFieldAvl('//ITRForm:CreditsToPL//ITRForm:OthIncome//ITRForm:TotOthIncome/text()' , 0);
+								var revenuefromoperation = checkFieldAvl('//ITRForm:CreditsToPL//ITRForm:TotRevenueFrmOperations/text()' , 0);
+								var grossrecipt = checkFieldAvl('//ITRForm:NoBooksOfAccPL//ITRForm:GrossReceipt/text()' , 0)
+								//Added field for calculation of Revenue in assyear 2017 & 2018 , 06th AUg Manoj
+								console.log('totalotherincome & revenuefromoperation & gross ' , totalotherincome , revenuefromoperation , gross );
+								var rev = parseFloat(totalrevenue) + parseFloat(revenuefromoperation)+parseFloat(grossrecipt);
+								revenue[i] = rev ;
 
 								incTax[i] = checkFieldAvl('//ITRForm:IncChargeableTaxSplRates/text()', 0);
 								via[i] = checkFieldAvl('//ITRForm:TotalChapVIADeductions/text()', 1);
@@ -507,26 +518,31 @@ module.exports = {
 								via[i] = checkFieldAvl('//ITRForm:TotDeductUndSchVIA/text()', 0);
 								//overAllSection44AB[i] = checkFieldAvl('//ITRForm:LiableSec44ABflg/text()', 0);
 								//sec92E[i] = checkFieldAvl('//ITRForm:Sec92EFirmFlag/text()', 0);
-								var totalotherincome = checkFieldAvl('//ITRForm:CreditsToPL//ITRForm:OthIncome//ITRForm:TotOthIncome/text()' , 0);
+								var totalrevenue = checkFieldAvl('//ITRForm:CreditsToPL//ITRForm:OthIncome//ITRForm:TotOthIncome/text()' , 0);
 								var revenuefromoperation = checkFieldAvl('//ITRForm:CreditsToPL//ITRForm:TotRevenueFrmOperations/text()' , 0);
-								var gross = checkFieldAvl('//ITRForm:NoBooksOfAccPL//ITRForm:GrossReceipt/text()' , 0)
-								console.log('totalotherincome & revenuefromoperation & gross ' , totalotherincome , revenuefromoperation , gross);
-								var rev = parseFloat(totalotherincome) + parseFloat(revenuefromoperation)+parseFloat(gross);
+								var grossrecipt = checkFieldAvl('//ITRForm:NoBooksOfAccPL//ITRForm:GrossReceipt/text()' , 0)
+								//Added field for calculation of Revenue in assyear 2017 & 2018 , 06th AUg Manoj
+								var grossproffesion = checkFieldAvl('//ITRForm:NoBooksOfAccPL//ITRForm:GrossReceiptPrf/text()' , 0)
+								console.log('totalotherincome & revenuefromoperation & gross ' , totalrevenue , revenuefromoperation , grossrecipt , grossproffesion);
+								var rev = parseFloat(totalrevenue) + parseFloat(revenuefromoperation)+parseFloat(grossrecipt)+parseFloat(grossproffesion);
 								revenue[i] = rev ;
 								depreAmrt[i] = checkFieldAvl('//ITRForm:DepreciationAmort/text()', 0);
 								interest[i] = checkFieldAvl('//ITRForm:InterestExpdr/text()', 0);
 								surcharge[i] =  checkFieldAvl('//ITRForm:ComputationOfTaxLiability//ITRForm:TaxPayableOnTI//ITRForm:SurchargeOnAboveCrore/text()' , 0);
+								//	Manoj 06thaug education cess fixses for 2017 & 2018 .
 								educ[i] =  checkFieldAvl('//ITRForm:ComputationOfTaxLiability//ITRForm:TaxPayableOnTI//ITRForm:EducationCess/text()' , 0);
 								console.log('edu & subcharge :' , surcharge[i] , educ[i]);
 								// New changes for profit before tax (17-7-2017)
-								    var net = checkFieldAvl('//ITRForm:NetProfit/text()', 0);
 									var pbidtaDet = checkFieldAvl('//ITRForm:PBIDTA/text()', 0);
 									
 									proBfIncTax[i] = parseFloat(pbidtaDet) + parseFloat(net);
 								// Extracting Revenue from PBT or NetProfit
-									//var pbt = checkFieldAvl('//ITRForm:PBT/text()',0);
-									proBfrTax[i] = proBfIncTax[i] - (parseFloat(depreAmrt[i]) + parseFloat(interest[i]));
-									
+									var pbt = checkFieldAvl('//ITRForm:PBT/text()',0);
+									var net = checkFieldAvl('//ITRForm:PARTA_PL//ITRForm:NoBooksOfAccPL//ITRForm:NetProfit/text()', 0);
+									var netpro = checkFieldAvl('//ITRForm:PARTA_PL//ITRForm:NoBooksOfAccPL//ITRForm:NetProfitPrf/text()', 0);
+									proBfrTax[i] = parseFloat(pbt) + parseFloat(net) + parseFloat(netpro)
+									//proBfrTax[i] = proBfIncTax[i] - (parseFloat(depreAmrt[i]) + parseFloat(interest[i]));
+									console.log('Profit before tax :' , proBfrTax[i]);
 								//proBfrTax[i] = checkFieldAvl('//ITRForm:PBT/text()', 0);
 								deduc10A[i] = checkFieldAvl('//ITRForm:DeductionsUnder10Aor10AA/text()', 0);
 								var amt1 =0;
@@ -858,7 +874,20 @@ module.exports = {
 								totIncOs[i] = checkFieldAvl('//ITRForm:IncomeOthSrc/text()', 0);
 								taxAtNor[i] = checkFieldAvl('//ITRForm:TotalTaxPayable/text()', 0);
 								educ[i] = checkFieldAvl('//ITRForm:EducationCess/text()', 0);
-							    ExIncome[i] = checkFieldAvl('//ITR4FORM:TaxExmpIntInc/text()', 0);
+								ExIncome[i] = checkFieldAvl('//ITR4FORM:TaxExmpIntInc/text()', 0);
+								///Added field Revenue 06th Aug 18 for 2017 & 2018 
+								var grossturnoverbank = checkFieldAvl('//ITRForm:PersumptiveInc44AD//ITRForm:GrsTrnOverBank/text()', 0);
+								var grossturnoverothers= checkFieldAvl('//ITRForm:PersumptiveInc44AD//ITRForm:GrsTrnOverAnyOthMode/text()', 0);
+								var grossrec = checkFieldAvl('//ITRForm:PersumptiveInc44ADA//ITRForm:GrsReceipt/text()' , 0);
+								console.log('Total revenue :' , grossturnoverbank , grossturnoverothers ,grossrec );
+								var rev = parseFloat(grossturnoverbank)+parseFloat(grossturnoverothers)+parseFloat(grossrec)
+								revenue[i] = rev 
+								//Added profit before tax
+								
+								proBfrTax[i] = checkFieldAvl('//ITRForm:ScheduleBP//ITRForm:PersumptiveInc44AE//ITRForm:IncChargeableUnderBus/text()' , 0);
+								interest[i] = checkFieldAvl('//ITRForm:ScheduleBP//ITRForm:PersumptiveInc44AE//ITRForm:IncChargeableUnderBus/text()' , 0);
+
+								console.log('profit before tax :' , proBfrTax[i] , interest[i]);
 								var amt2 =0;
 							parser.parseString(data, function (err, result) {
 									var test =[];
@@ -931,7 +960,23 @@ module.exports = {
 								totIncOs[i] = checkFieldAvl('//ITRForm:IncomeOthSrc/text()', 0);
 								taxAtNor[i] = checkFieldAvl('//ITRForm:TotalTaxPayable/text()', 0);
 								educ[i] = checkFieldAvl('//ITRForm:EducationCess/text()', 0);
-							    ExIncome[i] = checkFieldAvl('//ITR4FORM:TaxExmpIntInc/text()', 0);
+								ExIncome[i] = checkFieldAvl('//ITR4FORM:TaxExmpIntInc/text()', 0);
+								
+								///Added field Revenue 06th Aug 18 for 2017 & 2018 
+								var grossturnoverbank = checkFieldAvl('//ITRForm:PersumptiveInc44AD//ITRForm:GrsTrnOverBank/text()', 0);
+								var grossturnoverothers= checkFieldAvl('//ITRForm:PersumptiveInc44AD//ITRForm:GrsTrnOverAnyOthMode/text()', 0);
+								var grossrec = checkFieldAvl('//ITRForm:PersumptiveInc44ADA//ITRForm:GrsReceipt/text()' , 0);
+								console.log('Total revenue :' , grossturnoverbank , grossturnoverothers ,grossrec );
+								var rev = parseFloat(grossturnoverbank)+parseFloat(grossturnoverothers)+parseFloat(grossrec)
+								revenue[i] = rev ;
+
+																//Added profit before tax
+								
+																proBfrTax[i] = checkFieldAvl('//ITRForm:ScheduleBP//ITRForm:PersumptiveInc44AE//ITRForm:IncChargeableUnderBus/text()' , 0);
+																interest[i] = checkFieldAvl('//ITRForm:ScheduleBP//ITRForm:PersumptiveInc44AE//ITRForm:IncChargeableUnderBus/text()' , 0);
+								
+																console.log('profit before tax :' , proBfrTax[i] , interest[i]);
+
 								var amt2 =0;
 								var cashinHand3 =0;
 

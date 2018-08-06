@@ -44,6 +44,7 @@ module.exports = {
     itpConc(jsonname, filename, orderNo, pullSeqNo,oriRev) {  // this is for itprofile
         const files1 = path1 + orderNo + path2 + '/' + filename;
 		const files2 = path1 + orderNo + path2 + '/' + jsonname;
+		console.log('All files in ITP :' , files1 , files2 , jsonname ,filename , oriRev );
 		const data = fs.readFileSync(files2, 'utf-8');
 		let pan = '';
 		let name = '';
@@ -90,31 +91,46 @@ module.exports = {
 					data1 = data1.replace(/<\s*/g, '<');  // Remove space after >
 					data1 = data1.replace(/\s*>/g, '>');  // Remove space before <
 		if (data1) {
+			console.log('inside data1');
             var doc = new dom().parseFromString(data1.toString());
             var select = xpath.useNamespaces({ 'ITRForm': 'http://incometaxindiaefiling.gov.in/master' });
-            var formname = select('//ITRForm:FormName/text()', doc)[0].nodeValue;
+			var formname = select('//ITRForm:FormName/text()', doc)[0].nodeValue;
 			var assyear = select('//ITRForm:AssessmentYear/text()', doc)[0].nodeValue;
+			console.log('form name  & ass' , formname , assyear);
 			var resAdd = '';
 
 			var resNo = select('//ITRForm:ResidenceNo/text()', doc)[0].nodeValue;
 			var locArea = select('//ITRForm:LocalityOrArea/text()', doc)[0].nodeValue;
 			locArea = locArea.replace(/,/g,";");
+			console.log('Local Area :' , locArea);
 			//const resName = select('//ITRForm:ResidenceName/text()', doc)[0].nodeValue;
 			//const roadorStreet = select('//ITRForm:RoadOrStreet/text()', doc)[0].nodeValue;
 			var cityTown = select('//ITRForm:CityOrTownOrDistrict/text()', doc)[0].nodeValue;
 			var pinCode = select('//ITRForm:PinCode/text()', doc)[0].nodeValue;
 			var stateCode = select('//ITRForm:StateCode/text()', doc)[0].nodeValue;
-			var counCode = select('//ITRForm:CountryCode/text()', doc)[0].nodeValue;
+			console.log('city , pin:' , cityTown , pinCode);
+		//	var counCode = select('//ITRForm:CountryCode/text()', doc)[0].nodeValue;
+		//	console.log('countrycode:' , counCode);
 			var resName = null;
 			var roadorStreet = null;
+			var counCode = null ;
+			try {
+				counCode = select('//ITRForm:CountryCode/text()', doc)[0].nodeValue;
+				console.log('countrycode',counCode);
+			}
+			catch(e){
+				console.log('countrycode not found :' , e);
+			}
 			try{
 				 resName = select('//ITRForm:ResidenceName/text()', doc)[0].nodeValue;
+				 console.log('residence :' , resName);
 			}
 			catch(e){
 				console.log('resName' + e)
 			}
 			try{
 				 roadorStreet = select('//ITRForm:RoadOrStreet/text()', doc)[0].nodeValue;
+				 console.log('road :' , roadorStreet);
 			}
 			catch(e){
 				console.log('roadorStreet' + e)
@@ -137,11 +153,16 @@ module.exports = {
 			var staDetails = JSON.parse(states);
 			var stateFilter = where(staDetails, {"ITStateCode": stateCode});
 			var state = stateFilter[0].StateText;
+			if (counCode == null) {
+					console.log('country code not available');
+					var country = ''
+			}else{
 			var countries = fs.readFileSync('CountryCodes.json');
 			var counDet = JSON.parse(countries);
 			var countFilter = where(counDet, {"ITCountryCode": counCode});
 			var country = countFilter[0].CountryText;
-
+			console.log('state & country :' , state , country);
+			}
 			var itpro = [{
                 PAN__c: pan,
                 Name_of_Assessee__c: name,
@@ -158,7 +179,7 @@ module.exports = {
                 Mobile_Number__c: mobile,
                 Email__c: email,
             }];
-
+				console.log('itpro:' , itpro);
 			const fileEx = '.csv';
             const type = 'ITP';
             const header = ['PAN__c', 'Name_of_Assessee__c', 'DateOfBirth__c', 'Gender__c', 'AddressofAssessee_As_per_PAN__c', 'Flat_Door_Building__c', 'Area_Locality__c', 'Town_City_District__c', 'PINCODE__c', 'State__c', 'Country__c', 'Mobile_Number__c', 'Email__c'];

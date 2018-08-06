@@ -169,7 +169,7 @@ module.exports = {
 														errorRecovery.errRecovery(ffOrderNumber, 1, copyErr)
 													}
 													else {
-														console.log('Copied: ', params.Key);
+													//	console.log('Copied: ', params.Key);
 														getFile(s3);
 													}
 												});
@@ -188,13 +188,13 @@ module.exports = {
 
 				try {
 					function getFile(s3) {
-						console.log("Inside s3 file ",s3);
+						//console.log("Inside s3 file ",s3);
 						const orderFoldername = ffOrderNumber;
 						const prefix = "datapull/"+ffOrderNumber+"/";
 						console.log("Bucket :" , bucketName);
 						console.log("prefix : " , prefix);
 						const bucketParams = {Bucket: bucketName, Delimiter:"/", Prefix: prefix};
-						console.log("bucketParams : " , bucketParams);
+					//	console.log("bucketParams : " , bucketParams);
 						s3.listObjects(bucketParams,function(err, data) {
 							if (err) {
 								//errorRecovery.errRecovery(ffOrderNumber, 1, err)
@@ -202,8 +202,8 @@ module.exports = {
 
 							} else {
 								const contentLength = data.Contents.length
-								console.log("contentLength",contentLength);
-								console.log("data" , data);
+							//	console.log("contentLength",contentLength);
+							//	console.log("data" , data);
 								if(contentLength > 2) {
 									errorRecovery.errRecovery(ffOrderNumber, 2, 'Error source folder contains more than one ordernumber folders');
 								} else {
@@ -211,7 +211,7 @@ module.exports = {
 										console.log("destinationfolderid :" , destinationFolderId);
 										if (destOrderFolderID != null) {
 											getFile1(s3, data.Prefix, destOrderFolderID, (success) => {
-												console.log("success :" , success);
+											//	console.log("success :" , success);
 												if (success == true) {
 													const uploadPath = path1 + ffOrderNumber + path3;
 													console.log(uploadPath);
@@ -260,13 +260,13 @@ module.exports = {
 						const pullSeqFolderName = PullSeqNo; // PullSeqNo
 						const prefix = orderFolderId+pullSeqFolderName+"/";
 						const bucketParams = {Bucket: bucketName, Delimiter:"/", Prefix: prefix};
-						console.log("get file1 : " , bucketParams);
+					//	console.log("get file1 : " , bucketParams);
 						s3.listObjects(bucketParams,function(err, data) {
 							if (err) {
 								errorRecovery.errRecovery(ffOrderNumber, 1, err)
 							} else {
 								const contentLength = data.Contents.length
-								console.log( "contentlengthgetfile1", contentLength);
+								//console.log( "contentlengthgetfile1", contentLength);
 								if(contentLength > 1) {
 									errorRecovery.errRecovery(ffOrderNumber, 2, 'Error source folder contains more than one ordernumber folders');
 								} else {
@@ -322,15 +322,15 @@ module.exports = {
 							const prefix = pullSeqFolderId1+dataPullFolderName+"/";
 							const bucketParams = {Bucket: bucketName, Delimiter:"/", Prefix: prefix};
 			  counthits++;
-					console.log("listobjects get file 2 :" , bucketParams);
+					//console.log("listobjects get file 2 :" , bucketParams);
 							s3.listObjects(bucketParams, function(err,data){
 								if(err) {
 									errorRecovery.errRecovery(ffOrderNumber, 1, err)
 								} else {
 									const contentLength = data.Contents.length
-									console.log("get file 2 data;" , data);
+								//	console.log("get file 2 data;" , data);
 
-									console.log("ctentonlength get file 2: " , contentLength);
+								//	console.log("ctentonlength get file 2: " , contentLength);
 									if(contentLength >= 0) {
 										getFile2a(s3, data.Prefix, (success1) => {
 											if (success1 == true) {
@@ -424,14 +424,14 @@ module.exports = {
 							counthits++;
 							const prefix = returnFiledFolderId1;
 							const bucketParams = {Bucket: bucketName, Delimiter:"/", Prefix: prefix};
-							console.log("getFile4 : " , bucketParams);
+						//	console.log("getFile4 : " , bucketParams);
 	            s3.listObjects(bucketParams, function(err,data){
 								if(err) {
 									errorRecovery.errRecovery(ffOrderNumber, 1, error);
 	                return;
 								} else {
-									console.log("datavalue in get file 4 :" , data);
-									console.log(data.Contents.length , ": get file 4 data");
+								//	console.log("datavalue in get file 4 :" , data);
+									//console.log(data.Contents.length , ": get file 4 data");
 									if(data.Contents.length > 0) {
 										const gdYears = data.CommonPrefixes;
 										let k = 0;
@@ -490,14 +490,14 @@ module.exports = {
                 counthits++;
 								const prefix = yearId1;
 								const bucketParams = {Bucket: bucketName, Delimiter:"/", Prefix: prefix};
-								console.log("get file 5 : " , bucketParams);
+							//	console.log("get file 5 : " , bucketParams);
 		            s3.listObjects(bucketParams, function(err,data){
 									if (err) {
 										errorRecovery.errRecovery(ffOrderNumber, 1, err);
 									} else {
 										const contentLength = data.Contents.length;
-										console.log("get file 5 " , data );
-										console.log("get file 5 " , contentLength) ;
+									//	console.log("get file 5 " , data );
+									//	console.log("get file 5 " , contentLength) ;
 										if(contentLength >= 0) {
 											if(data.CommonPrefixes.length > 2){
 												processing.updateProceFile(ffOrderNumber,20,yearName,'FailureOthers');
@@ -517,7 +517,7 @@ module.exports = {
 																		if (success == true) {
 																				y++;
 																				if (y == data.CommonPrefixes.length ) {
-																						console.log('5');
+																						//console.log('5');
 																						return callback(true);
 																				}
 																		} else {
@@ -554,8 +554,8 @@ module.exports = {
 									 	return;
 									} else {
 										const commonPrefixes = data.CommonPrefixes;
-										console.log("get file 6 :" , commonPrefixes);
-										console.log("get file 6  : " , data);
+									//	console.log("get file 6 :" , commonPrefixes);
+									//	console.log("get file 6  : " , data);
 										let result = []
 										for(let i=0;i<commonPrefixes.length;i++){
 											var components=commonPrefixes[i].Prefix.split('/');
@@ -575,8 +575,8 @@ module.exports = {
 												})
 											}
 										}
-										console.log( "get file 6" +result)
-										console.log("get file 6 "+result.length);
+									//	console.log( "get file 6" +result)
+									//	console.log("get file 6 "+result.length);
 										if(result.length > 0) {
 											if(result.length > 1) {
 												getFile7(s3, result[0].prefix, orgRevFoldername1, yearName3, (success) => {
@@ -618,8 +618,8 @@ module.exports = {
 										errorRecovery.errRecovery(ffOrderNumber, 1, err);
 										return;
 									} else {
-										console.log("get file 7 : " , data.Contents.length );
-										console.log("get file 7  : " , data.CommonPrefixes);
+									//	console.log("get file 7 : " , data.Contents.length );
+									//	console.log("get file 7  : " , data.CommonPrefixes);
 										if(data.Contents.length >= 0) {
 											if (data.CommonPrefixes.length > 1) {
 												try {
@@ -956,7 +956,7 @@ module.exports = {
 	                        var Key=bucket.Key;
 	                        var components=bucket.Key.split('/');
 	                        var name=components[components.length-1];
-                          console.log(name)
+                         // console.log(name)
 													if(
 														name.includes("ProfileInfo")
 														|| name.includes("OutstandingDemand")
@@ -975,6 +975,7 @@ module.exports = {
 														|| name.includes("-2016")
 														|| name.includes("-2017")
 														|| name.includes("-2018")
+														|| name.includes("-2019")
 													)
 	                        results.push({
 	                            name: name.split(".")[0],

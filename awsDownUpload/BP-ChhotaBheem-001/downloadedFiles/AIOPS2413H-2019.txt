@@ -1,0 +1,72 @@
+^Form 26AS^
+
+File Creation Date^Permanent Account Number (PAN)^Current Status of PAN^Financial Year^Assessment Year^Name of Assessee^Address Line 1^Address Line 2^Address Line 3^Address Line 4^Address Line 5^Statecode^Pin Code
+19-01-2017^AFSPS6598H^ACTIVE^2018-2019^2019-2020^ANAND PRASHANTH SHETH^1^PUSHPADHNWA BUN^OPP AAKAR SOCIETY^SATELITE ROAD^AHMEDABAD^GUJARAT^380015
+
+^PART A - Details of Tax Deducted at Source^
+Sr. No.^Name of Deductor^TAN of Deductor^^^^^Total Amount Paid / Credited(Rs.)^Total Tax Deducted(Rs.)^Total TDS Deposited(Rs.)
+1^MY INDIA PRIVATE LIMITED^PNEO00089G^^^^^150000.00^15000.00^15000.00^
+^Sr. No.^Section^Transaction Date^Status of Booking^Date of Booking^Remarks^Amount Paid / Credited(Rs.)^Tax Deducted(Rs.)^TDS Deposited(Rs.)
+^1^192^05-Dec-2018^F^21-Mar-2019^-^30000.00^3000.00^3000.00^
+^2^192^05-Nov-2018^F^21-Dec-2018^-^30000.00^3000.00^3000.00^
+^3^192^30-Oct-2018^F^21-Dec-2018^-^30000.00^3000.00^3000.00^
+^4^192^05-Jun-2018^F^21-Jun-2018^-^30000.00^3000.00^3000.00^
+^5^192^05-May-2018^F^21-Jun-2018^-^30000.00^3000.00^3000.00^
+^6^192^05-Apr-2018^F^21-Jun-2018^-^30000.00^3000.00^3000.00^
+
+Sr. No.^Name of Deductor^TAN of Deductor^^^^^Total Amount Paid / Credited(Rs.)^Total Tax Deducted(Rs.)^Total TDS Deposited(Rs.)
+1^VINAYAK TMT BARS PRIVATE LIMITED^AHMV03553E^^^^^125692.00^12569.20^12569.20^
+^Sr. No.^Section^Transaction Date^Status of Booking^Date of Booking^Remarks^Amount Paid / Credited(Rs.)^Tax Deducted(Rs.)^TDS Deposited(Rs.)
+^1^194H^07-Mar-2019^F^30-Mar-2019^-^66554.00^6655.40^6655.40^
+^2^194H^07-Nov-2018^F^30-Dec-2018^-^34598.00^3459.80^3459.80^
+^3^194H^07-Jul-2018^F^30-Oct-2018^-^24540.00^2454.00^2454.00^
+
+^PART A1 - Details of Tax Deducted at Source for 15G / 15H^
+Sr. No.^Name of Deductor^TAN of Deductor^^^^Total Amount Paid / Credited(Rs.)^Total Tax Deducted(Rs.)^Total TDS Deposited(Rs.)
+^^^*********** No Transactions Present **********^
+
+
+^PART A2 - Details of Tax Deducted at Source on Sale of Immovable Property u/s 194IA(For Seller of Property)^
+Sr. No.^Acknowledgement Number^Name of Deductor^PAN of Deductor^Transaction Date^Total Transaction Amount(Rs.)^Total TDS Deposited(Rs.)
+1^004567^Ramakrishna^ADJPA7509J^07-July-2017^230000.00^23000.00
+Sr. No.^TDS Certificate^Date of Deposit^Status of Booking ^Date of Booking ^Demand Payment ^ TDS Deposited(Rs.)
+1^4356f^08-Jan-2019^F^08-Mar-2019^50000.00^5000.00
+2^4356f^08-Dec-2018^F^08-Mar-2019^50000.00^5000.00
+3^4356f^08-Nov-2018^F^08-Mar-2019^50000.00^5000.00
+4^4356f^08-Sep-2018^F^08-Mar-2019^30000.00^5000.00
+5^4356f^08-Aug-2018^F^08-Mar-2019^30000.00^5000.00
+6^4356f^08-May-2018^F^08-Mar-2019^20000.00^5000.00
+Gross Total Across Deductor(s)
+230000.00
+
+
+^PART B - Details of Tax Collected at Source^
+Sr. No.^Name of Collector^TAN of Collector^^^^^Total Amount Paid / Debited(Rs.)^Total Tax Collected(Rs.)^Total TCS Deposited(Rs.)
+^^^*********** No Transactions Present **********^
+
+
+^PART C - Details of Tax Paid (other than TDS or TCS)^
+Sr. No.^Major Head^Minor Head^Tax(Rs.)^Surcharge(Rs.)^Education Cess(Rs.)^Others(Rs.)^Total Tax(Rs.)^BSR Code^Date of  Deposit^Challan Serial Number^Remarks
+^^^*********** No Transactions Present **********^
+
+
+^PART D - Details of Paid Refund^
+Sr. No.^Assessment Year^Mode^Amount of Refund(Rs.)^Interest(Rs.)^Date of Payment^Remarks
+1^2016   ^ECS                 ^32680.0^795.0^17-Sep-2018^-
+
+
+^PART E - Details of AIR Transaction^
+Sr. No.^Type of Transaction^Name of AIR Filer^Transaction Date^Single / Joint Party Transaction^Number of Parties^Amount(Rs.)^Mode^Remarks
+1^005 - Acquiring shares >= Rs. 1,00,000^POWER GRID CORPORATION OF INDIA LTD,B-9 QUTAB INSTITUTIONAL AREA,KATWARIA SARAI NEW DELHI 090031 09 110016^16-Dec-2018^Single^1^50000.00^Cheque^-
+
+
+^PART F - Details of Tax Deducted at Source on Sale of Immovable Property u/s 194IA(For Buyer of Property)^
+Sr. No.^Acknowledgement Number^Name of Deductee^PAN of Deductee^Transaction Date^Total Transaction Amount(Rs.)^Total TDS Deposited(Rs.)^Total Amount Deposited other than TDS(Rs.)
+^^^*********** No Transactions Present **********^
+
+
+^PART G - TDS Defaults (Processing of Statements)^
+Sr. No.^Financial Year^Short Payment^Short Deduction^Interest on  TDS Payments Default^Interest on TDS Deduction Default^Late Filing Fee u/s 234E^Interest u/s 220(2)^Total Default
+^^^*********** No Transactions Present **********^
+
+

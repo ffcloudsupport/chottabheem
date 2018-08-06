@@ -50,7 +50,7 @@ var amqp = require('amqplib/callback_api');
 //var sackdelay = process.env.ACKDELAY || '1500';
 //var nackdelay = process.env.ACKDELAY || 900000;
 amqp.connect(recurl, function (err, conn) {
-  console.log(conn)
+ // console.log(conn)
     conn.createChannel(function (err, ch) {
         var q = recq;
         ch.assertQueue(q, {
@@ -66,7 +66,7 @@ amqp.connect(recurl, function (err, conn) {
             console.log('glob serverjs file ' + glob.ordstatus);
             const OrdProc = JSON.parse(OrderJson.content);
             exports.data = OrdProc ;
-            console.log('This is stored into OrdProc: ' + JSON.stringify(OrdProc));
+           // console.log('This is stored into OrdProc: ' + JSON.stringify(OrdProc));
             console.log(OrdProc.FFOrderNo);
             FFDBFunc.fffindone(FFOrder, OrdProc.FFOrderNo, (err, ffordlist) => {
                 if (err) {
