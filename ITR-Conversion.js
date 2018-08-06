@@ -885,9 +885,9 @@ module.exports = {
 								//Added profit before tax
 								
 								proBfrTax[i] = checkFieldAvl('//ITRForm:ScheduleBP//ITRForm:PersumptiveInc44AE//ITRForm:IncChargeableUnderBus/text()' , 0);
-								interest[i] = checkFieldAvl('//ITRForm:ScheduleBP//ITRForm:PersumptiveInc44AE//ITRForm:IncChargeableUnderBus/text()' , 0);
+								proBfIncTax[i] = checkFieldAvl('//ITRForm:ScheduleBP//ITRForm:PersumptiveInc44AE//ITRForm:IncChargeableUnderBus/text()' , 0);
 
-								console.log('profit before tax :' , proBfrTax[i] , interest[i]);
+								console.log('profit before tax :' , proBfrTax[i] , proBfIncTax[i]);
 								var amt2 =0;
 							parser.parseString(data, function (err, result) {
 									var test =[];
@@ -973,9 +973,9 @@ module.exports = {
 																//Added profit before tax
 								
 																proBfrTax[i] = checkFieldAvl('//ITRForm:ScheduleBP//ITRForm:PersumptiveInc44AE//ITRForm:IncChargeableUnderBus/text()' , 0);
-																interest[i] = checkFieldAvl('//ITRForm:ScheduleBP//ITRForm:PersumptiveInc44AE//ITRForm:IncChargeableUnderBus/text()' , 0);
+																proBfIncTax[i] = checkFieldAvl('//ITRForm:ScheduleBP//ITRForm:PersumptiveInc44AE//ITRForm:IncChargeableUnderBus/text()' , 0);
 								
-																console.log('profit before tax :' , proBfrTax[i] , interest[i]);
+																console.log('profit before tax :' , proBfrTax[i] , proBfIncTax[i]);
 
 								var amt2 =0;
 								var cashinHand3 =0;
