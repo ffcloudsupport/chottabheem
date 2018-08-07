@@ -292,7 +292,7 @@ module.exports = {
 						if(window["subSec" + count1] != undefined){
 						window["subSec" + count1].forEach (function (item2, count2, array2) {
 								var subSecArr = window["subSec" + count1][count2].split("^");
-								console.log('subsectionArr :' , subSecArr);
+							//	console.log('subsectionArr :' , subSecArr);
 								if (count2 > 0) {
 									try{
 										var QtrYearArr = subSecArr[3].split("-");

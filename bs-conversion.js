@@ -340,8 +340,8 @@ module.exports = {
                     const select = xpath.useNamespaces({ 'ITRForm': 'http://incometaxindiaefiling.gov.in/master' })
 					formname1 = checkFieldAvl1('//ITRForm:FormName/text()', 0);
 					assyear = checkFieldAvl1('//ITRForm:AssessmentYear/text()',0);
-
-				if((formname1 == 'ITR-4' || formname1 == 'ITR-4S') && (assyear == 2014 || assyear == 2015 || assyear == 2016 )){
+				//Remoived ITR-4s from the loop --07/08/18 ---- Manoj
+				if((formname1 == 'ITR-4') && (assyear == 2014 || assyear == 2015 || assyear == 2016 )){
 					proCap = checkFieldAvl1('//ITRForm:PropCap/text()', 0);
 					console.log(formname1,assyear,proCap);
 					totalResSurp = checkFieldAvl1('//ITRForm:TotResrNSurp/text()', 0);

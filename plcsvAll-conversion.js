@@ -32,6 +32,7 @@ var converter = new Converter({});
 
  module.exports = {
 	plCSVAllConv(orderNo, pullSeqNo) {
+	//	console.log('Enter plcsvall');
 		try{
 			var items = fs.readdirSync(path1 + orderNo + "/" +PLcsvPath );
 		console.log(items + '.....................................');

@@ -1,0 +1,63 @@
+^Form 26AS^
+
+File Creation Date^Permanent Account Number (PAN)^Current Status of PAN^Financial Year^Assessment Year^Name of Assessee^Address Line 1^Address Line 2^Address Line 3^Address Line 4^Address Line 5^Statecode^Pin Code
+19-01-2017^EBJPS3578D^ACTIVE^2017-2018^2018-2019^DHRUV PRADIPBHAI DALAL^1^PUSHPADHNWA BUN^OPP AAKAR SOCIETY^SATELITE ROAD^AHMEDABAD^GUJARAT^380015
+
+^PART A - Details of Tax Deducted at Source^
+Sr. No.^Name of Deductor^TAN of Deductor^^^^^Total Amount Paid / Credited(Rs.)^Total Tax Deducted(Rs.)^Total TDS Deposited(Rs.)
+1^VINAYAK TMT BARS PRIVATE LIMITED^AHMV03553E^^^^^24540.00^2454.00^2454.00^
+^Sr. No.^Section^Transaction Date^Status of Booking^Date of Booking^Remarks^Amount Paid / Credited(Rs.)^Tax Deducted(Rs.)^TDS Deposited(Rs.)
+^1^194H^07-Jul-2017^F^30-Oct-2017^-^24540.00^2454.00^2454.00^
+
+
+^PART A1 - Details of Tax Deducted at Source for 15G / 15H^
+Sr. No.^Name of Deductor^TAN of Deductor^^^^Total Amount Paid / Credited(Rs.)^Total Tax Deducted(Rs.)^Total TDS Deposited(Rs.)
+^^^*********** No Transactions Present **********^
+
+
+^PART A2 - Details of Tax Deducted at Source on Sale of Immovable Property u/s 194IA(For Seller of Property)^
+Sr. No.^Acknowledgement Number^Name of Deductor^PAN of Deductor^Transaction Date^Total Transaction Amount(Rs.)^Total TDS Deposited(Rs.)
+^^^*********** No Transactions Present **********^
+
+
+^PART B - Details of Tax Collected at Source^
+Sr. No.^Name of Collector^TAN of Collector^^^^^Total Amount Paid / Debited(Rs.)^Total Tax Collected(Rs.)^Total TCS Deposited(Rs.)
+^^^*********** No Transactions Present **********^
+
+
+^PART C - Details of Tax Paid (other than TDS or TCS)^
+Sr. No.^Major Head^Minor Head^Tax(Rs.)^Surcharge(Rs.)^Education Cess(Rs.)^Others(Rs.)^Total Tax(Rs.)^BSR Code^Date of  Deposit^Challan Serial Number^Remarks
+1^0021^300^30.00^0.00^0.00^0.00^1000.00^6360218^26-Mar-2018^02124^-
+2^0021^300^30.00^0.00^0.00^0.00^1000.00^6360218^26-Feb-2018^02124^-
+3^0021^300^30.00^0.00^0.00^0.00^1000.00^6360218^26-Jan-2018^02124^-
+4^0021^300^30.00^0.00^0.00^0.00^1000.00^6360218^26-Dec-2017^02124^-
+5^0021^300^30.00^0.00^0.00^0.00^1000.00^6360218^26-Nov-2017^02124^-
+6^0021^300^30.00^0.00^0.00^0.00^1000.00^6360218^26-Oct-2017^02124^-
+7^0021^300^30.00^0.00^0.00^0.00^1000.00^6360218^26-Sep-2017^02124^-
+8^0021^300^30.00^0.00^0.00^0.00^1000.00^6360218^26-Aug-2017^02124^-
+9^0021^300^30.00^0.00^0.00^0.00^1000.00^6360218^26-Jul-2017^02124^-
+10^0021^300^30.00^0.00^0.00^0.00^1000.00^6360218^26-Jun-2017^02124^-
+11^0021^300^30.00^0.00^0.00^0.00^1000.00^6360218^26-May-2017^02124^-
+12^0021^300^30.00^0.00^0.00^0.00^1000.00^6360218^26-Apr-2017^02124^-
+
+
+^PART D - Details of Paid Refund^
+Sr. No.^Assessment Year^Mode^Amount of Refund(Rs.)^Interest(Rs.)^Date of Payment^Remarks
+1^2016   ^ECS                 ^32680.0^795.0^17-Sep-2016^-
+
+
+^PART E - Details of AIR Transaction^
+Sr. No.^Type of Transaction^Name of AIR Filer^Transaction Date^Single / Joint Party Transaction^Number of Parties^Amount(Rs.)^Mode^Remarks
+^^^*********** No Transactions Present **********^
+
+
+^PART F - Details of Tax Deducted at Source on Sale of Immovable Property u/s 194IA(For Buyer of Property)^
+Sr. No.^Acknowledgement Number^Name of Deductee^PAN of Deductee^Transaction Date^Total Transaction Amount(Rs.)^Total TDS Deposited(Rs.)^Total Amount Deposited other than TDS(Rs.)
+^^^*********** No Transactions Present **********^
+
+
+^PART G - TDS Defaults (Processing of Statements)^
+Sr. No.^Financial Year^Short Payment^Short Deduction^Interest on  TDS Payments Default^Interest on TDS Deduction Default^Late Filing Fee u/s 234E^Interest u/s 220(2)^Total Default
+^^^*********** No Transactions Present **********^
+
+

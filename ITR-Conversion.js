@@ -474,7 +474,8 @@ module.exports = {
 								console.log('totalotherincome & revenuefromoperation & gross ' , totalotherincome , revenuefromoperation , gross );
 								var rev = parseFloat(totalrevenue) + parseFloat(revenuefromoperation)+parseFloat(grossrecipt);
 								revenue[i] = rev ;
-
+								var pbidtaDet = checkFieldAvl('//ITRForm:PBIDTA/text()', 0);
+								proBfIncTax[i] = parseFloat(pbidtaDet) ;
 								incTax[i] = checkFieldAvl('//ITRForm:IncChargeableTaxSplRates/text()', 0);
 								via[i] = checkFieldAvl('//ITRForm:TotalChapVIADeductions/text()', 1);
 								// Extracting overAllSection44AB
@@ -534,7 +535,7 @@ module.exports = {
 								console.log('edu & subcharge :' , surcharge[i] , educ[i]);
 								// New changes for profit before tax (17-7-2017)
 									var pbidtaDet = checkFieldAvl('//ITRForm:PBIDTA/text()', 0);
-									
+									proBfIncTax[i] = parseFloat(pbidtaDet) ;
 									
 								// Extracting Revenue from PBT or NetProfit
 									var pbt = checkFieldAvl('//ITRForm:PBT/text()',0);
@@ -543,7 +544,7 @@ module.exports = {
 									proBfrTax[i] = parseFloat(pbt) + parseFloat(net) + parseFloat(netpro)
 									//proBfrTax[i] = proBfIncTax[i] - (parseFloat(depreAmrt[i]) + parseFloat(interest[i]));
 									console.log('Profit before tax :' , proBfrTax[i]);
-									proBfIncTax[i] = parseFloat(pbidtaDet) + parseFloat(net);
+								
 								//proBfrTax[i] = checkFieldAvl('//ITRForm:PBT/text()', 0);
 								deduc10A[i] = checkFieldAvl('//ITRForm:DeductionsUnder10Aor10AA/text()', 0);
 								var amt1 =0;
