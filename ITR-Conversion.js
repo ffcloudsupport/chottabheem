@@ -766,10 +766,13 @@ module.exports = {
 
 								/* Extracting Revenue from TotCreditsToPL or GrossReceipt for 2017 added by sekar
 									previously only for 2014-2016*/
-									var rec = checkFieldAvl('//ITRForm:GrossReceipt/text()', 0);
+									//chaged for revenue values in 07-08-18 --- Manoj
+									var totalrevenue = checkFieldAvl('//ITRForm:CreditsToPL//ITRForm:OthIncome//ITRForm:TotOthIncome/text()' , 0);
+								var revenuefromoperation = checkFieldAvl('//ITRForm:CreditsToPL//ITRForm:TotRevenueFrmOperations/text()' , 0);
+								var grossrecipt = checkFieldAvl('//ITRForm:NoBooksOfAccPL//ITRForm:GrossReceipt/text()' , 0)
 									var rev = checkFieldAvl('//ITRForm:TotCreditsToPL/text()',0);
-									console.log(rec,rev);
-									revenue[i] = parseFloat(rec) + parseFloat(rev);
+
+									revenue[i] = parseFloat(totalrevenue) + parseFloat(revenuefromoperation) + parseFloat(grossrecipt);
 									console.log('revenue'+ revenue[i]);
 
 								// Extracting Revenue from PBT or NetProfit
