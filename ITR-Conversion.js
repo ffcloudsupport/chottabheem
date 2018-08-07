@@ -763,7 +763,7 @@ module.exports = {
 								// New changes for profit before tax (17-7-2017)
 								    var net = checkFieldAvl('//ITRForm:NetProfit/text()', 0);
 									var pbidtaDet = checkFieldAvl('//ITRForm:PBIDTA/text()', 0);
-									proBfIncTax[i] = parseFloat(pbidtaDet) + parseFloat(net);
+									proBfIncTax[i] = parseFloat(pbidtaDet) 
 
 								/* Extracting Revenue from TotCreditsToPL or GrossReceipt for 2017 added by sekar
 									previously only for 2014-2016*/
