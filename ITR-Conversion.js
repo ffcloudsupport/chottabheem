@@ -535,7 +535,7 @@ module.exports = {
 								// New changes for profit before tax (17-7-2017)
 									var pbidtaDet = checkFieldAvl('//ITRForm:PBIDTA/text()', 0);
 									
-									proBfIncTax[i] = parseFloat(pbidtaDet) + parseFloat(net);
+									
 								// Extracting Revenue from PBT or NetProfit
 									var pbt = checkFieldAvl('//ITRForm:PBT/text()',0);
 									var net = checkFieldAvl('//ITRForm:PARTA_PL//ITRForm:NoBooksOfAccPL//ITRForm:NetProfit/text()', 0);
@@ -543,6 +543,7 @@ module.exports = {
 									proBfrTax[i] = parseFloat(pbt) + parseFloat(net) + parseFloat(netpro)
 									//proBfrTax[i] = proBfIncTax[i] - (parseFloat(depreAmrt[i]) + parseFloat(interest[i]));
 									console.log('Profit before tax :' , proBfrTax[i]);
+									proBfIncTax[i] = parseFloat(pbidtaDet) + parseFloat(net);
 								//proBfrTax[i] = checkFieldAvl('//ITRForm:PBT/text()', 0);
 								deduc10A[i] = checkFieldAvl('//ITRForm:DeductionsUnder10Aor10AA/text()', 0);
 								var amt1 =0;
