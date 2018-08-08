@@ -534,8 +534,6 @@ module.exports = {
 								educ[i] =  checkFieldAvl('//ITRForm:ComputationOfTaxLiability//ITRForm:TaxPayableOnTI//ITRForm:EducationCess/text()' , 0);
 								console.log('edu & subcharge :' , surcharge[i] , educ[i]);
 								// New changes for profit before tax (17-7-2017)
-									var pbidtaDet = checkFieldAvl('//ITRForm:PBIDTA/text()', 0);
-									proBfIncTax[i] = parseFloat(pbidtaDet) ;
 									
 								// Extracting Revenue from PBT or NetProfit
 									var pbt = checkFieldAvl('//ITRForm:PBT/text()',0);
@@ -545,6 +543,14 @@ module.exports = {
 									//proBfrTax[i] = proBfIncTax[i] - (parseFloat(depreAmrt[i]) + parseFloat(interest[i]));
 									console.log('Profit before tax :' , proBfrTax[i]);
 								
+									//canged the Profitbeforeinctax for the values of zero on 08-08-18 ----- Manoj
+									var pbidtaDet = checkFieldAvl('//ITRForm:PBIDTA/text()', 0);
+									if (pbidtaDet == 0){
+										proBfIncTax[i] = parseFloat(net)+parseFloat(netpro)	
+									}else{
+									proBfIncTax[i] = parseFloat(pbidtaDet) ;
+									}
+
 								//proBfrTax[i] = checkFieldAvl('//ITRForm:PBT/text()', 0);
 								deduc10A[i] = checkFieldAvl('//ITRForm:DeductionsUnder10Aor10AA/text()', 0);
 								var amt1 =0;
