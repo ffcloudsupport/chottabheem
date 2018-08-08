@@ -768,8 +768,17 @@ module.exports = {
 
 								// New changes for profit before tax (17-7-2017)
 								    var net = checkFieldAvl('//ITRForm:NetProfit/text()', 0);
+							
+						
+
+
+									//canged the Profitbeforeinctax for the values of zero on 08-08-18 ----- Manoj
 									var pbidtaDet = checkFieldAvl('//ITRForm:PBIDTA/text()', 0);
-									proBfIncTax[i] = parseFloat(pbidtaDet) 
+									if (pbidtaDet == 0){
+										proBfIncTax[i] = parseFloat(net)+parseFloat(netpro)	
+									}else{
+									proBfIncTax[i] = parseFloat(pbidtaDet) ;
+									}
 
 								/* Extracting Revenue from TotCreditsToPL or GrossReceipt for 2017 added by sekar
 									previously only for 2014-2016*/
@@ -786,7 +795,7 @@ module.exports = {
 									var pbt = checkFieldAvl('//ITRForm:PBT/text()',0);
 									console.log(pbt,net);
 									//proBfrTax[i] = parseFloat(pbt) + parseFloat(net);
-									proBfrTax[i] = proBfIncTax[i] - (parseFloat(depreAmrt[i]) + parseFloat(interest[i]));
+									proBfrTax[i] = parseFloat(pbt) + parseFloat(net)
 									console.log('pbt'+ proBfrTax[i]);
 
 								//for dirSec44AB
