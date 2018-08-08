@@ -775,7 +775,7 @@ module.exports = {
 									//canged the Profitbeforeinctax for the values of zero on 08-08-18 ----- Manoj
 									var pbidtaDet = checkFieldAvl('//ITRForm:PBIDTA/text()', 0);
 									if (pbidtaDet == 0){
-										proBfIncTax[i] = parseFloat(net)+parseFloat(netpro)	
+										proBfIncTax[i] = parseFloat(net)+parseFloat(pbidtaDet)	
 									}else{
 									proBfIncTax[i] = parseFloat(pbidtaDet) ;
 									}
