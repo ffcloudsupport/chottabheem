@@ -1,0 +1,8 @@
+LARGEFILESIZE:      200000
+REC_Q:              chottabheem
+REC_Q1:             manual-ind-s3
+REC_Q2:             largexml
+REC_URL:            amqp://qbgyxnjv:B3DC8N6VYS00fsfPMLhHvEgifXvjJFSC@sidewinder.rmq.cloudamqp.com/qbgyxnjv
+REC_URL1:           amqp://qbgyxnjv:B3DC8N6VYS00fsfPMLhHvEgifXvjJFSC@sidewinder.rmq.cloudamqp.com/qbgyxnjv
+S3_BUCKET_NAME:     finfort-integrationtest
+UPLOAD_PARALLEL:    1
